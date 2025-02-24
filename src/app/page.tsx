@@ -1,101 +1,72 @@
-import Image from "next/image";
-
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<main className="container mx-auto grid grid-flow-row">
+			<section className="bg-sky-800 p-8">
+				<h2>WGS Tech: Excelência e Compromisso em Suporte Técnico de TI</h2>
+				<p>
+					Na era digital, onde a tecnologia desempenha um papel vital em todas
+					as esferas da sociedade, a WGS Tech se destaca como uma empresa
+					comprometida em fornecer soluções de suporte técnico de alta qualidade
+					para ambientes de Tecnologia da Informação (TI). Com uma abordagem
+					focada em inovação, responsabilidade e excelência, nossa missão é
+					garantir que nossos clientes alcancem o máximo desempenho e segurança
+					em suas operações.
+				</p>
+			</section>
+			<section>
+				<h2>Quem Somos</h2>
+				<p>
+					A WGS Tech nasceu da paixão por tecnologia e do desejo de simplificar
+					o gerenciamento de TI para empresas e organizações. Sabemos que o
+					sucesso de qualquer negócio depende de uma infraestrutura de TI
+					confiável e eficiente, e é exatamente isso que nos motiva. Somos
+					especialistas em suporte técnico, oferecendo soluções abrangentes e
+					personalizadas para atender às necessidades específicas de cada
+					cliente. Nossa equipe é formada por profissionais altamente
+					qualificados e certificados, com experiência em diversas áreas de TI,
+					incluindo redes, segurança da informação, suporte a servidores,
+					computação em nuvem e manutenção preventiva.
+				</p>
+			</section>
+			<section className="bg-sky-800 p-8">
+				<h2>Nossa Missão e Valores</h2>
+				<p>
+					<strong>Missão:</strong> Fornecer suporte técnico confiável e
+					eficiente, capacitando empresas a focarem em seus objetivos de
+					negócio, enquanto cuidamos de suas operações de TI com seriedade e
+					competência.
+				</p>
+				<div>
+					<strong>Valores:</strong>
+					<ul className="list-disc list-inside">
+						<li>
+							<strong>Compromisso com a Qualidade:</strong> Cada solução é
+							projetada para atender aos mais altos padrões de qualidade e
+							confiabilidade.
+						</li>
+						<li>
+							<strong>Inovação Contínua:</strong> Estamos sempre atualizados com
+							as tendências e inovações tecnológicas para oferecer o melhor aos
+							nossos clientes.
+						</li>
+						<li>
+							<strong>Foco no Cliente:</strong> Suas necessidades são a nossa
+							prioridade. Trabalhamos para entender e solucionar problemas de
+							maneira personalizada.
+						</li>
+						<li>
+							<strong>Ética e Transparência:</strong> Construímos
+							relacionamentos baseados na confiança, comunicando de forma clara
+							e honesta.
+						</li>
+						<li>
+							<strong>Sustentabilidade:</strong> Enxergamos a tecnologia como
+							uma aliada para criar um futuro mais sustentável, adotando
+							práticas que minimizem impactos ambientais.
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+	);
 }

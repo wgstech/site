@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Roboto_Flex } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/lib/components/header";
 
-const robotoSans = Roboto_Flex({
-	variable: "--font-roboto-flex",
+const robotoSans = Roboto({
+	variable: "--font-sans",
+	weight: ["400", "700"],
 	subsets: ["latin", "latin-ext"],
 	display: "swap",
 });
@@ -32,12 +34,10 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR">
 			<body
-				className={`${robotoSans.variable} antialiased bg-zinc-900 text-zinc-100`}
+				className={`${robotoSans.variable} antialiased bg-zinc-900 text-zinc-100 font-sans min-h-screen`}
 			>
-				<div className="flex min-h-screen flex-col items-start justify-center">
-					<header className="mx-auto w-full max-w-7xl py-8"></header>
-					{children}
-				</div>
+				<Header />
+				{children}
 			</body>
 		</html>
 	);

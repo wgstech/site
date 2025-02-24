@@ -1,9 +1,9 @@
 @import "tailwindcss";
-@import "/fonts/roboto.css";
 
 @theme {
   --color-logo-blue: #00AFEF;
   --color-logo-orange: #F58634;
+  --font-sans: var(--font-roboto-flex), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 @layer utilities {
