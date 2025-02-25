@@ -6,12 +6,38 @@
   --font-sans: var(--font-roboto-flex), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+@layer theme {
+  .bg-texture {
+    background-image: url(/images/texture.svg);
+  }
+
+  .bg-diagonal-lines {
+    background-image: url(/images/diagonal-lines.svg);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
-body {
-  @apply bg-gray-900 text-[87.5%] text-gray-300 antialiased md:text-[100%];
+@keyframes fadeInDown {
+  from {
+    transform: translate3d(0, -100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

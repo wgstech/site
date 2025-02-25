@@ -1,19 +1,31 @@
+import { Button } from "@/lib/components/button";
+import { VideoBackground } from "@/lib/layout/video-background";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { Phone } from "@phosphor-icons/react/dist/ssr";
+
 export default function Home() {
 	return (
-		<main className="container mx-auto grid grid-flow-row">
-			<section className="bg-sky-800 p-8">
-				<h2>WGS Tech: Excelência e Compromisso em Suporte Técnico de TI</h2>
-				<p>
-					Na era digital, onde a tecnologia desempenha um papel vital em todas
-					as esferas da sociedade, a WGS Tech se destaca como uma empresa
-					comprometida em fornecer soluções de suporte técnico de alta qualidade
-					para ambientes de Tecnologia da Informação (TI). Com uma abordagem
-					focada em inovação, responsabilidade e excelência, nossa missão é
-					garantir que nossos clientes alcancem o máximo desempenho e segurança
-					em suas operações.
+		<main className="mx-auto grid grid-flow-row">
+			<section className="h-[95vh] p-8 flex flex-col gap-4 items-center justify-center bg-transparent text-slate-100">
+				<VideoBackground />
+				<h1 className="font-bold text-5xl text-center motion-safe:animate-[fadeInDown_1.25s] ease-in-out z-10">
+					Otimize Sua Infraestrutura de TI e Reduza Custos
+				</h1>
+				<p className="text-slate-300 text-balance text-lg text-center starting:opacity-0 motion-safe:animate-[fadeIn_1.25s_ease_1.25s] motion-safe:delay-1250 ease-in-out z-10">
+					Suporte de TI Estratégico para Aumentar a Produtividade e a Eficiência
+					do Seu Negócio.
 				</p>
+				<div className="flex gap-8 mt-10">
+					<Button size="large">
+						<Phone className="size-6" /> Entrar em contato
+					</Button>
+					<Button variant="outline" size="large">
+						<ArrowRight className="size-5" />
+						Quero conhecer
+					</Button>
+				</div>
 			</section>
-			<section>
+			<section className="bg-sky-950">
 				<h2>Quem Somos</h2>
 				<p>
 					A WGS Tech nasceu da paixão por tecnologia e do desejo de simplificar
