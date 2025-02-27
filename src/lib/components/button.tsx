@@ -11,6 +11,7 @@ export interface ButtonProps extends ComponentProps<"button"> {
 
 export function Button({
 	children,
+	className,
 	variant = "normal",
 	size = "normal",
 }: ButtonProps) {
@@ -18,14 +19,16 @@ export function Button({
 		<button
 			type="button"
 			className={cn(
-				"flex items-center gap-2 cursor-pointer transition-all transition-discrete brightness-100 duration-150 hover:brightness-125",
+				"flex items-center gap-2 cursor-pointer transition-all transition-discrete duration-150",
 				{
 					"px-3 py-2 rounded-md": size === "normal",
 					"px-8 py-4 text-lg rounded-2xl": size === "large",
-					"bg-gradient-to-r from-sky-500 to-cyan-700 text-white":
+					"bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125":
 						variant === "normal",
-					"border border-sky-500 text-sky-500": variant === "outline",
+					"bg-transparent border border-sky-600 text-sky-600 hover:text-white hover:bg-sky-700 hover:border-sky-700":
+						variant === "outline",
 				},
+				className,
 			)}
 		>
 			{children}

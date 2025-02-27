@@ -2,7 +2,7 @@ import { VideoBlurBackground } from "./video-blur-background";
 
 export function VideoBackground() {
 	return (
-		<div className="absolute size-full -z-10">
+		<div className="absolute size-full">
 			<VideoBlurBackground />
 			<video
 				loop

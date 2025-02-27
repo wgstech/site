@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@plugin "tailwindcss-motion";
 
 @theme {
   --color-logo-blue: #00AFEF;
   --color-logo-orange: #F58634;
-  --font-sans: var(--font-roboto-flex), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-montserrat: "Montserrat", "Montserrat Fallback";
+  --font-roboto: "Roboto Flex", "Roboto Flex Fallback";
 }
 
 @layer theme {
@@ -20,24 +22,31 @@
   .text-balance {
     text-wrap: balance;
   }
-}
 
-@keyframes fadeInDown {
-  from {
-    transform: translate3d(0, -100%, 0);
-    opacity: 0;
+  .timeline-view {
+    animation-timeline: view();
+    animation-timing-function: linear;
+    animation-range-start: 100px;
   }
-  to {
-    transform: none;
-    opacity: 1;
-  }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+  .gradient-size-200 {
+    background-size: 200% 200%;
   }
-  to {
-    opacity: 1;
+
+  .gradient-pos-0 {
+    background-position: 0% 0%;
+  }
+
+  .hover\:gradient-pos-100:hover {
+    background-position: 100% 100%;
+  }
+  
+  @keyframes headerFadeIn {
+    from {
+      background-color: oklcha(0.269 0 0 0);
+    }
+    to {
+      background-color: oklcha(0.269 0 0 1);
+    }
   }
 }
