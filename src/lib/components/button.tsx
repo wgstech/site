@@ -19,10 +19,12 @@ export function Button({
 		<button
 			type="button"
 			className={cn(
-				"flex items-center gap-2 cursor-pointer transition-all transition-discrete duration-150",
+				"flex justify-center items-center gap-2 cursor-pointer transition-all transition-discrete duration-150",
 				{
-					"px-3 py-2 rounded-md": size === "normal",
-					"px-8 py-4 text-lg rounded-2xl": size === "large",
+					"p-2 md:px-3 rounded-lg": size === "normal",
+					"p-4 md:px-8 text-lg rounded-2xl": size === "large",
+				},
+				{
 					"bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125":
 						variant === "normal",
 					"bg-transparent border border-sky-600 text-sky-600 hover:text-white hover:bg-sky-700 hover:border-sky-700":
