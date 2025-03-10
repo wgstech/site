@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { Footer } from "@/lib/layout/footer/footer";
 import localFont from "next/font/local";
 import { Header } from "../lib/layout/navbar/header";
 
@@ -46,6 +47,7 @@ export default function RootLayout({
 			>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);
