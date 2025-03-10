@@ -4,8 +4,8 @@
 @theme {
   --color-logo-blue: #00AFEF;
   --color-logo-orange: #F58634;
-  --font-montserrat: "Montserrat", "Montserrat Fallback";
-  --font-roboto: "Roboto Flex", "Roboto Flex Fallback";
+  --font-sans: "Montserrat", "Montserrat Fallback", sans-serif;
+  --font-furore: "Furore", "furore Fallback", sans-serif;
 }
 
 @layer theme {
@@ -16,6 +16,40 @@
   .bg-diagonal-lines {
     background-image: url(/images/diagonal-lines.svg);
   }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      rotate: -10deg;
+      scale: 0.9;
+    }
+    to {
+      opacity: 1;
+      rotate: 0deg;
+      scale: 1;
+    }
+  }
+
+  @keyframes scale-out {
+    from {
+      opacity: 1;
+      rotate: 0deg;
+      scale: 1;
+    }
+    to {
+      opacity: 0;
+      rotate: -10deg;
+      scale: 0.95;
+    }
+  }
+
+  /* *:focus {
+    @apply outline-none;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-sky-800;
+  } */
 }
 
 @layer utilities {
@@ -39,14 +73,5 @@
 
   .hover\:gradient-pos-100:hover {
     background-position: 100% 100%;
-  }
-  
-  @keyframes headerFadeIn {
-    from {
-      background-color: oklcha(0.269 0 0 0);
-    }
-    to {
-      background-color: oklcha(0.269 0 0 1);
-    }
   }
 }

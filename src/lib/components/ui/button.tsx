@@ -1,5 +1,5 @@
-import type { ComponentProps, PropsWithChildren } from "react";
-import { cn } from "../utils/cn";
+import type { ComponentProps } from "react";
+import { cn } from "../../utils/cn";
 
 type ButtonVariant = "normal" | "outline";
 type ButtonSize = "normal" | "large";

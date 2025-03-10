@@ -1,4 +1,4 @@
-import { Button } from "@/lib/components/button";
+import { Button } from "@/lib/components/ui/button";
 import { VideoBackground } from "@/lib/layout/video-background";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { Phone } from "@phosphor-icons/react/dist/ssr";

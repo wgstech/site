@@ -6,12 +6,14 @@ export function BenefitsSection() {
 	return (
 		<section
 			id="beneficios"
-			className={cn("container min-h-[95vh] bg-slate-100 mx-auto")}
+			className={cn(
+				"container min-h-[95vh] bg-slate-100 mx-auto flex items-center flex-col",
+			)}
 		>
-			<h2 className="font-extrabold text-2xl md:text-4xl text-sky-700 text-center">
+			<h2 className="font-extrabold text-3xl md:text-4xl text-sky-700 text-center">
 				Recursos e Benefícios que Impulsionam Seu Sucesso
 			</h2>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-32 mt-10">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-12 mt-14">
 				<BenefitCard
 					title="Soluções Personalizadas"
 					Icon={Gear}

@@ -17,14 +17,14 @@ export function BenefitCard({
 	return (
 		<MotionInView
 			className={cn(
-				"flex flex-col items-center gap-3 p-8",
-				"text-slate-800 text-center text-balance text-sm md:text-base",
+				"flex flex-col items-center gap-3 p-8 max-w-[60ch]",
+				"text-slate-800 text-center text-sm md:text-lg text-balance",
 				"motion-safe:motion-preset-fade-lg motion-safe:motion-slide-up-lg",
 				className,
 			)}
 		>
-			<Icon weight="fill" className="size-12 md:size-15 text-sky-800" />
-			<h3 className="font-semibold font-montserrat text-xl md:text-2xl text-sky-800">
+			<Icon weight="fill" className="size-12 md:size-16 text-logo-orange" />
+			<h3 className="font-semibold font-montserrat text-2xl md:text-3xl text-sky-700">
 				{title}
 			</h3>
 			{children}

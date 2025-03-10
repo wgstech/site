@@ -1,13 +1,21 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/lib/layout/header";
+import localFont from "next/font/local";
+import { Header } from "../lib/layout/navbar/header";
 
 const montserrat = Montserrat({
 	variable: "--font-montserrat",
-	weight: ["400", "700"],
+	weight: ["400", "600", "700"],
 	subsets: ["latin", "latin-ext"],
 	display: "swap",
+});
+
+const furore = localFont({
+	src: "./fonts/furore.woff2",
+	weight: "400",
+	display: "swap",
+	variable: "--font-furore",
 });
 
 export const metadata = {
@@ -34,7 +42,7 @@ export default function RootLayout({
 	return (
 		<html lang="pt-BR">
 			<body
-				className={`${montserrat.variable} antialiased bg-slate-100 text-slate-900 font-montserrat min-h-screen text-[87.5%] md:text-[100%] scroll-smooth`}
+				className={`${montserrat.variable} ${furore.variable} antialiased bg-slate-100 text-slate-900 min-h-screen text-[87.5%] md:text-[100%] scroll-smooth`}
 			>
 				<Header />
 				{children}
