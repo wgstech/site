@@ -4,7 +4,7 @@ import { LogoWithText } from "./logo";
 
 export function Header() {
 	return (
-		<header className="w-full bg-slate-100/90  fixed z-100 backdrop-blur-sm text-slate-900">
+		<header className="w-full bg-slate-100/90 sticky z-100 backdrop-blur-sm text-slate-900">
 			<nav className="px-4 mx-auto container flex items-center justify-between transition-colors duration-500">
 				<LogoWithText />
 				<div className="justify-end gap-8 w-full flex h-full items-center">
