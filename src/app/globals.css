@@ -2,8 +2,8 @@
 @plugin "tailwindcss-motion";
 
 @theme {
-  --color-logo-blue: #00AFEF;
-  --color-logo-orange: #F58634;
+  --color-logo-blue: #00afef;
+  --color-logo-orange: #f58634;
   --font-sans: "Montserrat", "Montserrat Fallback", sans-serif;
   --font-furore: "Furore", "furore Fallback", sans-serif;
 }
