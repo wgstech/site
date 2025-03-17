@@ -9,14 +9,14 @@ export interface ButtonProps extends ComponentProps<"button"> {
   size?: ButtonSize;
 }
 
-export function Button({ children, className, variant = "normal", size = "normal" }: ButtonProps) {
+export function Button({ children, className, variant = "normal", size = "normal", ...rest }: ButtonProps) {
   return (
     <button
       type="button"
       className={cn(
-        "flex justify-center items-center gap-2 cursor-pointer transition-all transition-discrete duration-150",
+        "flex justify-center items-center gap-2 cursor-pointer transition-all transition-discrete duration-150 leading-0",
         {
-          "p-2 md:px-3 rounded-lg": size === "normal",
+          "p-3 md:px-4 rounded-xl": size === "normal",
           "p-4 md:px-8 text-lg rounded-2xl": size === "large",
         },
         {
@@ -26,6 +26,7 @@ export function Button({ children, className, variant = "normal", size = "normal
         },
         className,
       )}
+      {...rest}
     >
       {children}
     </button>

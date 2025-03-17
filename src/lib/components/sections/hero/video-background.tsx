@@ -9,10 +9,7 @@ export function VideoBackground() {
         <source type="video/webm" src="/video/landing-page.webm" />
         <source type="video/mp4" src="/video/landing-page.mp4" />
       </video>
-      <CaretDown
-        size={36}
-        className="absolute bottom-8 left-1/2 z-100 motion-safe:motion-preset-oscillate-lg motion-duration-2000"
-      />
+      <CaretDown className="size-9 not-last:absolute bottom-8 left-1/2 z-100 motion-safe:motion-preset-oscillate-lg motion-duration-2000" />
     </div>
   );
 }

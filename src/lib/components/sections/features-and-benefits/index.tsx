@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils/cn";
 import { Cloud, Gear, LockKey, TrendUp } from "@phosphor-icons/react/dist/ssr";
 import { BenefitCard } from "./benefit-card";
 
-export function BenefitsSection() {
+export function FeaturesAndBenefits() {
   return (
     <section id="beneficios" className={cn("container min-h-[95vh] bg-slate-100 mx-auto flex items-center flex-col")}>
       <h2 className="font-extrabold text-3xl md:text-4xl text-sky-700 text-center">

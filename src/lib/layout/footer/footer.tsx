@@ -28,13 +28,13 @@ export function Footer() {
             <h3 className="text-xl font-bold tracking-wider py-2">Contatos</h3>
             <li>
               <ExternalLink href="mailto:contato@wgstech.com.br">
-                <EnvelopeSimple weight="light" size={24} />
+                <EnvelopeSimple weight="light" className="size-6" />
                 <span>contato@wgstech.com.br</span>
               </ExternalLink>
             </li>
             <li>
               <ExternalLink href="https://maps.app.goo.gl/w62PVnwWYQ8wwXGw7">
-                <MapPin weight="light" size={24} />
+                <MapPin weight="light" className="size-6" />
                 <span>
                   Edifício San Marino - R. Heitor de Moura Estevão, 229
                   <br /> Sala 220 - Várzea, Teresópolis - RJ, 25953-090
@@ -43,7 +43,7 @@ export function Footer() {
             </li>
             <li>
               <ExternalLink href="https://wa.me/5521978838514">
-                <WhatsappLogo weight="light" size={24} />
+                <WhatsappLogo weight="light" className="size-6" />
                 <span>21 978-838-514</span>
               </ExternalLink>
             </li>
@@ -56,10 +56,10 @@ export function Footer() {
           </div>
           <div className="flex items-center gap-5">
             <ExternalLink href="https://linkedin.com/">
-              <LinkedIn size={20} />
+              <LinkedIn size="1.25rem" />
             </ExternalLink>
             <ExternalLink href="https://instagram.com/wgs.tech/">
-              <Instagram size={20} />
+              <Instagram size="1.25rem" />
             </ExternalLink>
           </div>
         </div>

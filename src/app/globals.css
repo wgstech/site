@@ -43,13 +43,13 @@
     }
   }
 
-  /* *:focus {
+  *:focus {
     @apply outline-none;
   }
 
   *:focus-visible {
-    @apply outline-2 outline-sky-800;
-  } */
+    @apply outline-solid outline-2 outline-logo-orange;
+  }
 }
 
 @layer utilities {
