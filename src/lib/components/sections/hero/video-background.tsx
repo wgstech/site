@@ -3,19 +3,18 @@ import { VideoBlurBackground } from "./video-blur-background";
 
 export function VideoBackground() {
   return (
-    <div className="absolute size-full">
+    <div className="fixed inset-0 -z-10 h-screen w-screen">
       <VideoBlurBackground />
       <video
         loop
         autoPlay
         muted
-        playsInline
-        className="absolute top-0 left-0 -z-10 size-full object-cover"
+        className="absolute top-0 left-0 size-full object-cover"
       >
         <source type="video/webm" src="/video/landing-page.webm" />
         <source type="video/mp4" src="/video/landing-page.mp4" />
       </video>
-      <CaretDown className="motion-safe:motion-preset-oscillate-lg motion-duration-2000 bottom-8 left-1/2 z-100 size-9 not-last:absolute" />
+      <CaretDown className="motion-duration-2000 motion-safe:motion-preset-oscillate-lg absolute bottom-8 left-1/2 size-9 -translate-x-1/2 text-slate-100" />
     </div>
   );
 }

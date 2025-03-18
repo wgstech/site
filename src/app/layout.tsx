@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
-import { Header } from "../lib/layout/navbar/header";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -46,7 +45,6 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${furore.variable} min-h-screen scroll-smooth bg-slate-100 text-[87.5%] text-slate-900 antialiased md:text-[100%]`}
       >
-        <Header />
         {children}
         <Footer />
       </body>

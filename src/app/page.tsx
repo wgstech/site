@@ -1,10 +1,14 @@
 import { Hero } from "@/lib/components/sections/hero";
+import { Header } from "@/lib/layout/navbar/header";
 import { FeaturesAndBenefits } from "../lib/components/sections/features-and-benefits";
 
 export default function Home() {
   return (
-    <main className="mx-auto grid grid-flow-row gap-32 bg-slate-100">
-      <Hero />
+    <main className="mx-auto gap-32">
+      <div className="flex h-screen w-full flex-col">
+        <Header />
+        <Hero />
+      </div>
       <FeaturesAndBenefits />
       <section className="bg-sky-950">
         <h2>Quem Somos</h2>

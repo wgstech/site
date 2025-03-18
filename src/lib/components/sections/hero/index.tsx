@@ -5,7 +5,7 @@ import { VideoBackground } from "./video-background";
 
 export function Hero() {
   return (
-    <section className="z-20 flex h-[90vh] flex-col items-center justify-center gap-4 bg-transparent p-8 text-slate-100">
+    <section className="flex flex-1 flex-col items-center justify-center gap-4 bg-transparent p-8 text-slate-100">
       <VideoBackground />
       <h1 className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-lg text-center text-3xl font-bold md:text-5xl">
         Otimize Sua Infraestrutura de TI e Reduza Custos
@@ -17,7 +17,7 @@ export function Hero() {
       <div className="mt-10 flex flex-col gap-8 md:flex-row">
         <ContactFormModal>
           <Button
-            size="large"
+            size="xl"
             className="motion-delay-1500 motion-safe:motion-preset-fade-lg"
           >
             <Phone className="size-6" /> Entrar em contato
@@ -25,7 +25,7 @@ export function Hero() {
         </ContactFormModal>
         <Button
           variant="outline"
-          size="large"
+          size="xl"
           className="motion-delay-1550 motion-safe:motion-preset-fade-lg"
         >
           <ArrowRight className="size-5" />

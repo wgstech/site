@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import { cn } from "../../utils/cn";
 
 type ButtonVariant = "normal" | "outline";
-type ButtonSize = "normal" | "large";
+type ButtonSize = "md" | "lg" | "xl";
 
 export interface ButtonProps extends ComponentProps<"button"> {
   variant?: ButtonVariant;
@@ -13,7 +13,7 @@ export function Button({
   children,
   className,
   variant = "normal",
-  size = "normal",
+  size = "md",
   ...rest
 }: ButtonProps) {
   return (
@@ -22,8 +22,9 @@ export function Button({
       className={cn(
         "flex cursor-pointer items-center justify-center gap-2 leading-0 transition-all transition-discrete duration-150",
         {
-          "rounded-xl p-3 md:px-4": size === "normal",
-          "rounded-2xl p-4 text-lg md:px-8": size === "large",
+          "rounded-xl p-3 md:px-4": size === "md",
+          "rounded-2xl p-3 text-lg md:px-4": size === "lg",
+          "rounded-2xl p-4 text-lg md:px-8": size === "xl",
         },
         {
           "bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125":
