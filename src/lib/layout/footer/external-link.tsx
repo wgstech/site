@@ -1,6 +1,8 @@
 import type { ComponentProps } from "react";
 
-export function ExternalLink({ ...props }: Omit<ComponentProps<"a">, "rel" | "target" | "className">) {
+export function ExternalLink({
+  ...props
+}: Omit<ComponentProps<"a">, "rel" | "target" | "className">) {
   return (
     <a
       {...props}

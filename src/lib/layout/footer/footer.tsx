@@ -1,4 +1,8 @@
-import { EnvelopeSimple, MapPin, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import {
+  EnvelopeSimple,
+  MapPin,
+  WhatsappLogo,
+} from "@phosphor-icons/react/dist/ssr";
 import { ExternalLink } from "./external-link";
 import Instagram from "./logos/instagram.svg";
 import { LinkedIn } from "./logos/linkedin.svg";
@@ -6,12 +10,16 @@ import { LinkedIn } from "./logos/linkedin.svg";
 export function Footer() {
   return (
     <div className="w-full bg-gradient-to-br from-sky-700 to-cyan-700 text-white">
-      <footer className="container mx-auto ">
+      <footer className="container mx-auto">
         <div className="flex justify-evenly py-10">
           <ul className="flex flex-col gap-2">
-            <h3 className="text-xl font-bold tracking-wider py-2">Menu</h3>
-            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/login">Nuvem</ExternalLink>
-            <ExternalLink href="https://www.hdtune.com/files/hdtune_255.exe">HD Tune</ExternalLink>
+            <h3 className="py-2 text-xl font-bold tracking-wider">Menu</h3>
+            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/login">
+              Nuvem
+            </ExternalLink>
+            <ExternalLink href="https://www.hdtune.com/files/hdtune_255.exe">
+              HD Tune
+            </ExternalLink>
             <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/Xp7kLMfRR8cpJZT">
               GLPI Padronização
             </ExternalLink>
@@ -19,13 +27,17 @@ export function Footer() {
             <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/3H8STsrQ6HZtM3A">
               Setup APAC 1.2.5
             </ExternalLink>
-            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/bYCrZr2CzCpsGsw">Reset EPSON</ExternalLink>
+            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/bYCrZr2CzCpsGsw">
+              Reset EPSON
+            </ExternalLink>
           </ul>
           <ul className="flex flex-col gap-2">
-            <h3 className="text-xl font-bold tracking-wider py-2">Links Úteis</h3>
+            <h3 className="py-2 text-xl font-bold tracking-wider">
+              Links Úteis
+            </h3>
           </ul>
           <ul className="flex flex-col gap-2">
-            <h3 className="text-xl font-bold tracking-wider py-2">Contatos</h3>
+            <h3 className="py-2 text-xl font-bold tracking-wider">Contatos</h3>
             <li>
               <ExternalLink href="mailto:contato@wgstech.com.br">
                 <EnvelopeSimple weight="light" className="size-6" />
@@ -49,9 +61,12 @@ export function Footer() {
             </li>
           </ul>
         </div>
-        <div className="flex items-center justify-evenly p-2 text-neutral-300 text-xs">
-          <div className="flex-col flex">
-            <span>© {new Date().getFullYear()} WGS Tech. Todos os direitos reservados.</span>
+        <div className="flex items-center justify-evenly p-2 text-xs text-neutral-300">
+          <div className="flex flex-col">
+            <span>
+              © {new Date().getFullYear()} WGS Tech. Todos os direitos
+              reservados.
+            </span>
             <span>[Razão Social] - CNPJ 12.345.678/0001-00</span>
           </div>
           <div className="flex items-center gap-5">

@@ -1,8 +1,22 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowRight, User, WhatsappLogo, X } from "@phosphor-icons/react/dist/ssr";
-import { Close, Content, Description, Overlay, Portal, Root, Title, Trigger } from "@radix-ui/react-dialog";
+import {
+  ArrowRight,
+  User,
+  WhatsappLogo,
+  X,
+} from "@phosphor-icons/react/dist/ssr";
+import {
+  Close,
+  Content,
+  Description,
+  Overlay,
+  Portal,
+  Root,
+  Title,
+  Trigger,
+} from "@radix-ui/react-dialog";
 import { type PropsWithChildren, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import validator from "validator";
@@ -13,7 +27,10 @@ import { LabeledInput } from "./ui/labeled-input";
 
 const formSchema = z.object({
   name: z.string().trim().min(3, "Deve conter no mínimo três caracteres"),
-  phone: z.string().trim().refine(validator.isMobilePhone, "Deve ser um número de telefone válido"),
+  phone: z
+    .string()
+    .trim()
+    .refine(validator.isMobilePhone, "Deve ser um número de telefone válido"),
   details: z.string().trim().min(10, "Deve conter no mínimo dez caracteres"),
 });
 
@@ -47,14 +64,21 @@ export function ContactFormModal({ children }: PropsWithChildren) {
     <Root open={open} onOpenChange={setOpen}>
       <Trigger asChild>{children}</Trigger>
       <Portal>
-        <Overlay className="fixed inset-0 bg-black/65 data-[state=open]:motion-preset-fade-sm z-100" />
-        <Content className="z-100 fixed left-1/2 top-1/2 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-100 p-[25px] shadow data-[state=open]:motion-preset-focus-sm">
-          <Title className="text-lg font-medium text-sky-700">Entraremos em contato com você</Title>
-          <Description className="mb-5 mt-2 text-sm leading-normal text-slate-700 bg-slate-200 p-2 flex items-center gap-3 rounded-lg">
-            <WhatsappLogo className="text-sky-700 size-7" weight="light" />
+        <Overlay className="data-[state=open]:motion-preset-fade-sm fixed inset-0 z-100 bg-black/65" />
+        <Content className="data-[state=open]:motion-preset-focus-sm fixed top-1/2 left-1/2 z-100 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-100 p-[25px] shadow">
+          <Title className="text-lg font-medium text-sky-700">
+            Entraremos em contato com você
+          </Title>
+          <Description className="mt-2 mb-5 flex items-center gap-3 rounded-lg bg-slate-200 p-2 text-sm leading-normal text-slate-700">
+            <WhatsappLogo className="size-7 text-sky-700" weight="light" />
             <span>
               Ou entre em contato agora no nosso{" "}
-              <a href="https://wa.me/5521978838514" target="_blank" rel="noreferrer" className="underline text-sky-700">
+              <a
+                href="https://wa.me/5521978838514"
+                target="_blank"
+                rel="noreferrer"
+                className="text-sky-700 underline"
+              >
                 WhatsApp.
               </a>
             </span>
@@ -94,7 +118,7 @@ export function ContactFormModal({ children }: PropsWithChildren) {
           <Close asChild>
             <button
               type="button"
-              className="absolute right-2.5 top-2.5 inline-flex items-center justify-center rounded-full text-sky-700 bg-slate-200 size-7 transition-colors hover:bg-slate-300 hover:text-sky-800"
+              className="absolute top-2.5 right-2.5 inline-flex size-7 items-center justify-center rounded-full bg-slate-200 text-sky-700 transition-colors hover:bg-slate-300 hover:text-sky-800"
               aria-label="Close"
             >
               <X className="size-6" />

@@ -8,18 +8,25 @@ interface BenefitCardProps extends ComponentProps<typeof MotionInView> {
   Icon: PhosphorIcon;
 }
 
-export function BenefitCard({ children, title, Icon, className }: BenefitCardProps) {
+export function BenefitCard({
+  children,
+  title,
+  Icon,
+  className,
+}: BenefitCardProps) {
   return (
     <MotionInView
       className={cn(
-        "flex flex-col items-center gap-3 p-8 max-w-[60ch]",
-        "text-slate-800 text-center text-sm md:text-lg text-balance",
+        "flex max-w-[60ch] flex-col items-center gap-3 p-8",
+        "text-center text-sm text-balance text-slate-800 md:text-lg",
         "motion-safe:motion-preset-fade-lg motion-safe:motion-slide-up-lg",
         className,
       )}
     >
-      <Icon weight="fill" className="size-12 md:size-16 text-logo-orange" />
-      <h3 className="font-semibold font-montserrat text-2xl md:text-3xl text-sky-700">{title}</h3>
+      <Icon weight="fill" className="text-logo-orange size-12 md:size-16" />
+      <h3 className="font-montserrat text-2xl font-semibold text-sky-700 md:text-3xl">
+        {title}
+      </h3>
       {children}
     </MotionInView>
   );

@@ -4,9 +4,11 @@ import Link from "next/link";
 
 export function LogoWithText() {
   return (
-    <Link href="/" className="flex items-center p-2 gap-2">
+    <Link href="/" className="flex items-center gap-2 p-2">
       <Image src={logo.src} alt="" width={45} height={45} priority />
-      <span className="font-furore text-nowrap font-medium text-lg">WGS TECH</span>
+      <span className="font-furore text-lg font-medium text-nowrap">
+        WGS TECH
+      </span>
     </Link>
   );
 }

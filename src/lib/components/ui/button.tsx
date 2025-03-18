@@ -9,19 +9,26 @@ export interface ButtonProps extends ComponentProps<"button"> {
   size?: ButtonSize;
 }
 
-export function Button({ children, className, variant = "normal", size = "normal", ...rest }: ButtonProps) {
+export function Button({
+  children,
+  className,
+  variant = "normal",
+  size = "normal",
+  ...rest
+}: ButtonProps) {
   return (
     <button
       type="button"
       className={cn(
-        "flex justify-center items-center gap-2 cursor-pointer transition-all transition-discrete duration-150 leading-0",
+        "flex cursor-pointer items-center justify-center gap-2 leading-0 transition-all transition-discrete duration-150",
         {
-          "p-3 md:px-4 rounded-xl": size === "normal",
-          "p-4 md:px-8 text-lg rounded-2xl": size === "large",
+          "rounded-xl p-3 md:px-4": size === "normal",
+          "rounded-2xl p-4 text-lg md:px-8": size === "large",
         },
         {
-          "bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125": variant === "normal",
-          "bg-transparent border border-sky-600 text-sky-600 hover:text-white hover:bg-sky-700 hover:border-sky-700":
+          "bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125":
+            variant === "normal",
+          "border border-sky-600 bg-transparent text-sky-600 hover:border-sky-700 hover:bg-sky-700 hover:text-white":
             variant === "outline",
         },
         className,

@@ -4,10 +4,10 @@ import { LogoWithText } from "./logo";
 
 export function Header() {
   return (
-    <header className="w-full bg-slate-100/90 sticky top-0 z-100 backdrop-blur-sm text-slate-900">
-      <nav className="px-4 mx-auto container flex items-center justify-between transition-colors duration-500">
+    <header className="sticky top-0 z-100 w-full bg-slate-100/90 text-slate-900 backdrop-blur-sm">
+      <nav className="container mx-auto flex items-center justify-between px-4 transition-colors duration-500">
         <LogoWithText />
-        <div className="justify-end gap-8 w-full flex h-full items-center">
+        <div className="flex h-full w-full items-center justify-end gap-8">
           <NavLink href="https://solicita.wgstech.com.br">Suporte</NavLink>
         </div>
       </nav>
@@ -18,7 +18,7 @@ export function Header() {
 export function NavLink(props: ComponentProps<typeof Link>) {
   return (
     <Link
-      className="cursor-pointer rounded-md p-2 motion-ease-in-out motion-duration-200 hover:-motion-translate-y-out-[2px] hover:text-sky-800 focus-within:-motion-translate-y-out-[2px] focus-within:text-sky-800 text-xs font-medium tracking-widest uppercase"
+      className="motion-ease-in-out motion-duration-200 hover:-motion-translate-y-out-[2px] focus-within:-motion-translate-y-out-[2px] cursor-pointer rounded-md p-2 text-xs font-medium tracking-widest uppercase focus-within:text-sky-800 hover:text-sky-800"
       {...props}
     />
   );

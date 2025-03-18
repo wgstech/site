@@ -24,13 +24,16 @@ export function LabeledInput<T extends "input" | "textarea">({
 }: LabeledInputProps<T>) {
   return (
     <fieldset className="group">
-      <label className="text-lg font-medium text-slate-900" htmlFor={register.name}>
+      <label
+        className="text-lg font-medium text-slate-900"
+        htmlFor={register.name}
+      >
         {label}
       </label>
-      <div className="mt-1 flex flex-col clear-both relative items-center">
+      <div className="relative clear-both mt-1 flex flex-col items-center">
         {Icon != null && (
           <Icon
-            className="size-6 absolute left-2 top-1/2 -translate-y-1/2 text-slate-400 transition-colors group-focus-within:text-logo-orange"
+            className="group-focus-within:text-logo-orange absolute top-1/2 left-2 size-6 -translate-y-1/2 text-slate-400 transition-colors"
             weight={iconFill}
           />
         )}
@@ -56,7 +59,11 @@ export function LabeledInput<T extends "input" | "textarea">({
           />
         )}
       </div>
-      {error != null && <p className="text-sm text-rose-500 text-left w-full">{error.message}</p>}
+      {error != null && (
+        <p className="w-full text-left text-sm text-rose-500">
+          {error.message}
+        </p>
+      )}
     </fieldset>
   );
 }
@@ -65,7 +72,7 @@ function Input({ className, name, ...rest }: ComponentPropsWithRef<"input">) {
   return (
     <input
       className={cn(
-        "inset-shadow-sm ring-1 ring-slate-800/10 flex w-full leading-none items-center justify-center rounded-lg p-3 text-slate-700 placeholder:text-slate-400 focus:ring-logo-orange",
+        "focus:ring-logo-orange flex w-full items-center justify-center rounded-lg p-3 leading-none text-slate-700 inset-shadow-sm ring-1 ring-slate-800/10 placeholder:text-slate-400",
         className,
       )}
       id={name}
@@ -75,11 +82,15 @@ function Input({ className, name, ...rest }: ComponentPropsWithRef<"input">) {
   );
 }
 
-function TextArea({ className, name, ...rest }: ComponentPropsWithRef<"textarea">) {
+function TextArea({
+  className,
+  name,
+  ...rest
+}: ComponentPropsWithRef<"textarea">) {
   return (
     <textarea
       className={cn(
-        "mt-1 resize-none text-wrap field-sizing-content w-full min-h-[3lh] max-h-[5lh] rounded-lg p-2 text-slate-700 placeholder:text-slate-400 inset-shadow-sm ring-1 ring-slate-800/10 focus:ring-logo-orange",
+        "focus:ring-logo-orange mt-1 field-sizing-content max-h-[5lh] min-h-[3lh] w-full resize-none rounded-lg p-2 text-wrap text-slate-700 inset-shadow-sm ring-1 ring-slate-800/10 placeholder:text-slate-400",
         className,
       )}
       id={name}
