@@ -2,12 +2,13 @@
   "name": "wgstech.com.br",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "lint": "next lint",
-    "start": "next start",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "biome lint",
+    "start": "next start"
   },
   "dependencies": {
     "@hookform/resolvers": "^4.1.3",
