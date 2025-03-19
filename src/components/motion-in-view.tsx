@@ -2,7 +2,7 @@
 
 import { useIntersectionObserver } from "@react-hooks-library/core";
 import { type ComponentProps, useRef } from "react";
-import { cn } from "../utils/cn";
+import { cn } from "../lib/utils/cn";
 
 export default function MotionInView({
   className,

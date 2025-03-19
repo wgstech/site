@@ -1,5 +1,5 @@
-import { ContactFormModal } from "@/lib/components/contact-form-modal";
-import { Button } from "@/lib/components/ui/button";
+import { ContactFormModal } from "@/components/contact-form-modal";
+import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
 import { VideoBackground } from "./video-background";
 

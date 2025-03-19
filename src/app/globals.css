@@ -17,6 +17,14 @@
     background-image: url(/images/diagonal-lines.svg);
   }
 
+  .brand-gradient {
+    @apply from-sky-600 to-cyan-700;
+  }
+
+  .button-gradient {
+    @apply from-sky-500 to-cyan-700;
+  }
+
   @keyframes scale-in {
     from {
       opacity: 0;

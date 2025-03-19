@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { cn } from "../../utils/cn";
+import { cn } from "../../lib/utils/cn";
 
 type ButtonVariant = "normal" | "outline";
 type ButtonSize = "md" | "lg" | "xl";
@@ -27,7 +27,7 @@ export function Button({
           "rounded-2xl p-4 text-lg md:px-8": size === "xl",
         },
         {
-          "bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125":
+          "button-gradient bg-gradient-to-r text-white hover:brightness-125":
             variant === "normal",
           "border border-sky-600 bg-transparent text-sky-600 hover:border-sky-700 hover:bg-sky-700 hover:text-white":
             variant === "outline",

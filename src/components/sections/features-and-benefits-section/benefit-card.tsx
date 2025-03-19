@@ -1,4 +1,4 @@
-import MotionInView from "@/lib/components/motion-in-view";
+import MotionInView from "@/components/motion-in-view";
 import { cn } from "@/lib/utils/cn";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import type { ComponentProps } from "react";

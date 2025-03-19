@@ -1,4 +1,3 @@
-import { cn } from "@/lib/utils/cn";
 import {
   ArrowRight,
   Cloud,
@@ -13,12 +12,10 @@ import { BenefitCard } from "./benefit-card";
 
 export function FeaturesAndBenefits() {
   return (
-    <div className="w-full bg-slate-100 pt-30">
+    <div className="w-full bg-slate-100 py-30">
       <section
         id="beneficios"
-        className={cn(
-          "container mx-auto flex min-h-[95vh] flex-col items-center",
-        )}
+        className="container mx-auto flex flex-col items-center"
       >
         <MotionInView className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up">
           <h2 className="text-center text-3xl font-extrabold text-sky-700 md:text-4xl">

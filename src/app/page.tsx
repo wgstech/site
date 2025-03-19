@@ -1,6 +1,9 @@
-import { Hero } from "@/lib/components/sections/hero";
+import { ContactSection } from "@/components/sections/contact-section";
+import { Hero } from "@/components/sections/hero";
+import { Services } from "@/components/sections/services";
+import { SocialProof } from "@/components/sections/social-proof";
 import { Header } from "@/lib/layout/navbar/header";
-import { FeaturesAndBenefits } from "../lib/components/sections/features-and-benefits";
+import { FeaturesAndBenefits } from "../components/sections/features-and-benefits-section";
 
 export default function Home() {
   return (
@@ -10,7 +13,10 @@ export default function Home() {
         <Hero />
       </div>
       <FeaturesAndBenefits />
-      <section className="bg-sky-950">
+      <SocialProof />
+      <Services />
+      <ContactSection />
+      {/* <section className="bg-sky-950">
         <h2>Quem Somos</h2>
         <p>
           A WGS Tech nasceu da paixão por tecnologia e do desejo de simplificar
@@ -63,7 +69,7 @@ export default function Home() {
             </li>
           </ul>
         </div>
-      </section>
+      </section> */}
     </main>
   );
 }
