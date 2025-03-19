@@ -1,4 +1,4 @@
-export function SocialProof() {
+export function SocialProofSection() {
   return (
     <section
       id="prova-social"

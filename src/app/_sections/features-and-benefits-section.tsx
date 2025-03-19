@@ -5,10 +5,10 @@ import {
   LockKey,
   TrendUp,
 } from "@phosphor-icons/react/dist/ssr";
-import { ContactFormModal } from "../../contact-form-modal";
-import MotionInView from "../../motion-in-view";
-import { Button } from "../../ui/button";
-import { BenefitCard } from "./benefit-card";
+import { ContactFormModal } from "../../components/contact-form-modal";
+import MotionInView from "../../components/motion-in-view";
+import { Button } from "../../components/ui/button";
+import { BenefitCard } from "./components/benefit-card";
 
 export function FeaturesAndBenefits() {
   return (

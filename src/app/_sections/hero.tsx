@@ -1,7 +1,7 @@
 import { ContactFormModal } from "@/components/contact-form-modal";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone } from "@phosphor-icons/react/dist/ssr";
-import { VideoBackground } from "./video-background";
+import { VideoBackground } from "./components/video-background";
 
 export function Hero() {
   return (

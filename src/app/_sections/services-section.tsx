@@ -2,9 +2,9 @@ import classImg from "@/assets/images/cards/class.jpg";
 import consultingImg from "@/assets/images/cards/consulting.jpg";
 import networkImg2 from "@/assets/images/cards/network-2.jpg";
 import technicianImg1 from "@/assets/images/cards/technician-1.jpg";
-import { Card } from "./card";
+import { Card } from "../../components/ui/card";
 
-export function Services() {
+export function ServicesSection() {
   return (
     <div className="w-full bg-slate-100 px-30">
       <section id="serviços" className="container mx-auto py-14">

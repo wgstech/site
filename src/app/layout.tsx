@@ -22,8 +22,11 @@ const furore = localFont({
 export const metadata = {
   title: "WGS Tech",
   applicationName: "WGS Tech",
-  description: "",
-  keywords: ["WGS", "Tech", "WGSTech"],
+  description: "Excelência e Compromisso em Suporte Técnico de TI",
+  keywords: ["WGS", "Tech", "WGSTech", "Suporte", "TI", "Consultoria"],
+  authors: { name: "Leonardo Gurgel", url: "https://gurgel.io" },
+  creator: "Leonardo Gurgel",
+  publisher: "WGSTech",
   robots: {
     follow: true,
     index: true,

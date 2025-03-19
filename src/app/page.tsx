@@ -1,9 +1,9 @@
-import { ContactSection } from "@/components/sections/contact-section";
-import { Hero } from "@/components/sections/hero";
-import { Services } from "@/components/sections/services";
-import { SocialProof } from "@/components/sections/social-proof";
 import { Header } from "@/lib/layout/navbar/header";
-import { FeaturesAndBenefits } from "../components/sections/features-and-benefits-section";
+import { ContactSection } from "./_sections/contact-section";
+import { FeaturesAndBenefits } from "./_sections/features-and-benefits-section";
+import { Hero } from "./_sections/hero";
+import { ServicesSection } from "./_sections/services-section";
+import { SocialProofSection } from "./_sections/social-proof-section";
 
 export default function Home() {
   return (
@@ -13,8 +13,8 @@ export default function Home() {
         <Hero />
       </div>
       <FeaturesAndBenefits />
-      <SocialProof />
-      <Services />
+      <SocialProofSection />
+      <ServicesSection />
       <ContactSection />
       {/* <section className="bg-sky-950">
         <h2>Quem Somos</h2>
