@@ -1,12 +1,14 @@
+import { cn } from "@/lib/utils/cn";
 import type { ComponentProps } from "react";
 
 export function ExternalLink({
+  className,
   ...props
-}: Omit<ComponentProps<"a">, "rel" | "target" | "className">) {
+}: Omit<ComponentProps<"a">, "rel" | "target">) {
   return (
     <a
       {...props}
-      className="flex items-center gap-2 text-sm text-neutral-200 transition-colors hover:text-white"
+      className={cn("flex items-center gap-2 text-sm", className)}
       rel="noreferrer"
       target="_blank"
     />

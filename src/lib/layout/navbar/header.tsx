@@ -1,6 +1,6 @@
+import { LogoWithText } from "@/components/logo";
 import Link from "next/link";
 import type { ComponentProps } from "react";
-import { LogoWithText } from "./logo";
 
 export function Header() {
   return (

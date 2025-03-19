@@ -1,3 +1,4 @@
+import { LogoWithText } from "@/components/logo";
 import {
   EnvelopeSimple,
   MapPin,
@@ -9,76 +10,69 @@ import { LinkedIn } from "./logos/linkedin.svg";
 
 export function Footer() {
   return (
-    <div className="w-full bg-gradient-to-br from-sky-700 to-cyan-700 text-white">
-      <footer className="container mx-auto">
-        <div className="flex justify-evenly py-10">
-          <ul className="flex flex-col gap-2">
-            <h3 className="py-2 text-xl font-bold tracking-wider">Menu</h3>
-            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/login">
-              Nuvem
-            </ExternalLink>
-            <ExternalLink href="https://www.hdtune.com/files/hdtune_255.exe">
-              HD Tune
-            </ExternalLink>
-            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/Xp7kLMfRR8cpJZT">
-              GLPI Padronização
-            </ExternalLink>
-            <ExternalLink href="https://rmm.wgstech.com.br/">RMM</ExternalLink>
-            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/3H8STsrQ6HZtM3A">
-              Setup APAC 1.2.5
-            </ExternalLink>
-            <ExternalLink href="https://nuvem.wgstech.com.br/index.php/s/bYCrZr2CzCpsGsw">
-              Reset EPSON
-            </ExternalLink>
-          </ul>
-          <ul className="flex flex-col gap-2">
-            <h3 className="py-2 text-xl font-bold tracking-wider">
-              Links Úteis
-            </h3>
-          </ul>
-          <ul className="flex flex-col gap-2">
-            <h3 className="py-2 text-xl font-bold tracking-wider">Contatos</h3>
-            <li>
-              <ExternalLink href="mailto:contato@wgstech.com.br">
-                <EnvelopeSimple weight="light" className="size-6" />
-                <span>contato@wgstech.com.br</span>
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink href="https://maps.app.goo.gl/w62PVnwWYQ8wwXGw7">
-                <MapPin weight="light" className="size-6" />
-                <span>
-                  Edifício San Marino - R. Heitor de Moura Estevão, 229
-                  <br /> Sala 220 - Várzea, Teresópolis - RJ, 25953-090
-                </span>
-              </ExternalLink>
-            </li>
-            <li>
-              <ExternalLink href="https://wa.me/5521978838514">
-                <WhatsappLogo weight="light" className="size-6" />
-                <span>21 978-838-514</span>
-              </ExternalLink>
-            </li>
-          </ul>
+    <footer className="w-full bg-slate-800 text-slate-100">
+      <div className="mx-auto flex justify-evenly py-10">
+        <div className="flex flex-col self-center">
+          <LogoWithText
+            className="text-slate-400 brightness-125 saturate-15 transition-all duration-500 hover:saturate-100"
+            size={60}
+          />
+          <p className="px-4 text-sm text-slate-200">
+            Excelência e Compromisso <br />
+            em Suporte Técnico de TI
+          </p>
         </div>
-        <div className="flex items-center justify-evenly p-2 text-xs text-neutral-300">
-          <div className="flex flex-col">
-            <span>
-              © {new Date().getFullYear()} WGS Tech. Todos os direitos
-              reservados.
-            </span>
-            <span>[Razão Social] - CNPJ 12.345.678/0001-00</span>
-          </div>
-          <div className="flex items-center gap-5">
-            <ExternalLink href="https://linkedin.com/">
-              <LinkedIn size="1.25rem" />
+        {/* <ul className="flex flex-col gap-2">
+          <h3 className="py-2 text-xl font-bold tracking-wider">Links Úteis</h3>
+        </ul> */}
+        <ul className="flex flex-col gap-2">
+          <h3 className="py-2 text-xl font-bold tracking-wider">Contatos</h3>
+          <li>
+            <ExternalLink href="mailto:contato@wgstech.com.br">
+              <EnvelopeSimple weight="light" className="size-6" />
+              <span>contato@wgstech.com.br</span>
             </ExternalLink>
-            <ExternalLink href="https://instagram.com/wgs.tech/">
-              <Instagram size="1.25rem" />
+          </li>
+          <li>
+            <ExternalLink href="https://maps.app.goo.gl/w62PVnwWYQ8wwXGw7">
+              <MapPin weight="light" className="size-6" />
+              <span>
+                Edifício San Marino - R. Heitor de Moura Estevão, 229
+                <br /> Sala 220 - Várzea, Teresópolis - RJ, 25953-090
+              </span>
             </ExternalLink>
-          </div>
+          </li>
+          <li>
+            <ExternalLink href="https://wa.me/5521978838514">
+              <WhatsappLogo weight="light" className="size-6" />
+              <span>21 978-838-514</span>
+            </ExternalLink>
+          </li>
+        </ul>
+      </div>
+      <div className="flex items-center justify-evenly border-t border-t-white/15 py-4 text-xs text-slate-200">
+        <div className="flex flex-col">
+          <span>
+            © {new Date().getFullYear()} WGS Tech. Todos os direitos
+            reservados.
+          </span>
+          <span>[Razão Social] - CNPJ 12.345.678/0001-00</span>
         </div>
-      </footer>
-    </div>
+        <div className="flex items-center gap-5">
+          <ExternalLink
+            href="https://linkedin.com/"
+            className="transition-colors hover:text-white"
+          >
+            <LinkedIn size="1.25rem" />
+          </ExternalLink>
+          <ExternalLink
+            href="https://instagram.com/wgs.tech/"
+            className="transition-colors hover:text-white"
+          >
+            <Instagram size="1.25rem" />
+          </ExternalLink>
+        </div>
+      </div>
+    </footer>
   );
 }
