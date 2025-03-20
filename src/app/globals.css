@@ -6,17 +6,10 @@
   --color-logo-orange: #f58634;
   --font-sans: "Montserrat", "Montserrat Fallback", sans-serif;
   --font-furore: "Furore", "furore Fallback", sans-serif;
+  --default-transition-duration: 500ms;
 }
 
 @layer theme {
-  .bg-texture {
-    background-image: url(/images/texture.svg);
-  }
-
-  .bg-diagonal-lines {
-    background-image: url(/images/diagonal-lines.svg);
-  }
-
   .brand-gradient {
     @apply from-sky-600 to-cyan-700;
   }

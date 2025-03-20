@@ -9,7 +9,7 @@ export function ExternalLink({
     <a
       {...props}
       className={cn(
-        "flex items-center gap-2 rounded-md text-sm transition-colors duration-500 hover:text-sky-300",
+        "flex items-center gap-2 rounded-md text-sm transition-colors hover:text-sky-300",
         className,
       )}
       rel="noreferrer"

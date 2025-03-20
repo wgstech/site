@@ -13,7 +13,7 @@ export function Card({ img, children, title, className }: CardProps) {
   return (
     <MotionInView
       className={cn(
-        "group motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-sm flex flex-col gap-3 overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl",
+        "group motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-sm flex flex-col gap-3 overflow-hidden rounded-2xl shadow-lg transition-shadow hover:shadow-2xl",
         className,
       )}
     >

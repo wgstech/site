@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export function VideoBackground() {
   return (
-    <div className="absolute inset-0 -z-10 h-screen w-full">
+    <div className="absolute inset-0 -z-10 h-screen w-full" aria-hidden="true">
       <Image
         src={landingPageImg}
         width={landingPageImg.width}

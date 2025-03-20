@@ -31,7 +31,7 @@ export function FeaturesAndBenefits() {
         <BenefitCard
           title="Otimização de Infraestrutura"
           Icon={TrendUp}
-          className="motion-delay-300"
+          className="motion-delay-400"
         >
           Analisamos sua infraestrutura de TI e implementamos as melhores
           práticas para otimizar o desempenho, reduzir custos e aumentar a
@@ -40,7 +40,7 @@ export function FeaturesAndBenefits() {
         <BenefitCard
           title="Segurança da Informação"
           Icon={LockKey}
-          className="motion-delay-600"
+          className="motion-delay-500"
         >
           Implementamos soluções de segurança robustas para proteger seus dados
           e sua empresa contra vírus, hackers e outras ameaças cibernéticas.
@@ -55,7 +55,7 @@ export function FeaturesAndBenefits() {
           segura e eficiente.
         </BenefitCard>
       </div>
-      <MotionInView className="motion-delay-900 motion-safe:motion-preset-fade-lg motion-safe:motion-slide-up-lg">
+      <MotionInView className="motion-delay-700 motion-safe:motion-preset-fade-lg motion-safe:motion-slide-up-lg">
         <ContactFormModal>
           <Button size="lg" className="mx-auto mt-14" type="button">
             <ArrowRight />

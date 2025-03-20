@@ -20,7 +20,7 @@ export function Button({
     <button
       type="button"
       className={cn(
-        "flex cursor-pointer items-center justify-center gap-2 leading-0 transition-all transition-discrete duration-150",
+        "flex cursor-pointer items-center justify-center gap-2 leading-0 transition-all transition-discrete",
         {
           "rounded-xl p-3 md:px-4": size === "md",
           "rounded-2xl p-3 text-lg md:px-4": size === "lg",
