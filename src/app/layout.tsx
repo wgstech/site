@@ -1,4 +1,6 @@
 import { Footer } from "@/lib/layout/footer/footer";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Montserrat } from "next/font/google";
 import localFont from "next/font/local";
@@ -51,6 +53,8 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <Analytics />
+      <SpeedInsights />
     </html>
   );
 }
