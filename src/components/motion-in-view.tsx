@@ -4,12 +4,9 @@ import { useIntersectionObserver } from "@react-hooks-library/core";
 import { type ComponentProps, useRef } from "react";
 import { cn } from "../lib/utils/cn";
 
-export default function MotionInView({
-  className,
-  ...rest
-}: ComponentProps<"div">) {
+export function MotionInView({ className, ...rest }: ComponentProps<"div">) {
   const ref = useRef(null);
-  const { inView } = useIntersectionObserver(ref, { threshold: 0.2 });
+  const { inView } = useIntersectionObserver(ref, { threshold: 0.3 });
 
   return (
     <div

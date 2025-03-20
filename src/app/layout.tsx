@@ -1,4 +1,4 @@
-import { Footer } from "@/lib/layout/footer/footer";
+import { Footer } from "@/app/_layout/footer";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
@@ -36,8 +36,8 @@ export const metadata = {
 } satisfies Metadata;
 
 export const viewport = {
-  colorScheme: "dark",
-  themeColor: "#F58634",
+  colorScheme: "light",
+  themeColor: "#0D0A0E",
 } satisfies Viewport;
 
 export default function RootLayout({

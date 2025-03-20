@@ -1,14 +1,22 @@
+import { cn } from "@/lib/utils/cn";
 import Image, { type StaticImageData } from "next/image";
 import type { PropsWithChildren } from "react";
+import { MotionInView } from "../motion-in-view";
 
 interface CardProps extends PropsWithChildren {
   img: StaticImageData;
   title: string;
+  className?: string;
 }
 
-export function Card({ img, children, title }: CardProps) {
+export function Card({ img, children, title, className }: CardProps) {
   return (
-    <article className="group flex flex-col gap-3 overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl">
+    <MotionInView
+      className={cn(
+        "group motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-sm flex flex-col gap-3 overflow-hidden rounded-2xl shadow-lg transition-shadow duration-500 hover:shadow-2xl",
+        className,
+      )}
+    >
       <Image
         className="aspect-video w-full object-cover"
         src={img.src}
@@ -18,12 +26,12 @@ export function Card({ img, children, title }: CardProps) {
         height={640}
         placeholder="blur"
       />
-      <header className="flex flex-1 flex-col px-5 py-4">
-        <h3 className="h-[2lh] text-xl font-semibold text-slate-800">
+      <article className="flex flex-1 flex-col px-5 py-4">
+        <h3 className="min-h-[2lh] text-xl font-semibold text-slate-800">
           {title}
         </h3>
         <p className="mt-2 text-sm text-slate-600">{children}</p>
-      </header>
-    </article>
+      </article>
+    </MotionInView>
   );
 }

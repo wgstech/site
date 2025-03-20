@@ -1,4 +1,4 @@
-import { ExternalLink } from "@/lib/layout/footer/external-link";
+import { ExternalLink } from "@/app/_layout/footer/external-link";
 
 export default function Toolbox() {
   return (

@@ -1,10 +1,13 @@
+import { SectionContainer } from "@/components/ui/section-container";
+import { SectionTitle } from "@/components/ui/section-title";
+
 export function SocialProofSection() {
   return (
-    <section
+    <SectionContainer
       id="prova-social"
-      className="brand-gradient flex h-[90vh] items-center justify-center bg-gradient-to-br text-white"
+      className="brand-gradient h-[90vh] bg-gradient-to-br text-white"
     >
-      <h2 className="text-3xl">TODO: prova social</h2>
-    </section>
+      <SectionTitle className="text-slate-100">TODO: prova social</SectionTitle>
+    </SectionContainer>
   );
 }
