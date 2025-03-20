@@ -52,9 +52,9 @@ export default function RootLayout({
       >
         {children}
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
-      <Analytics />
-      <SpeedInsights />
     </html>
   );
 }
