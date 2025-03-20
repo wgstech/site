@@ -1,6 +1,6 @@
-import { SectionContainer } from "@/components/ui/section-container";
-import { ContactForm } from "../../components/contact-form";
-import { SectionTitle } from "../../components/ui/section-title";
+import { ContactForm } from "@/lib/components/contact-form";
+import { SectionContainer } from "@/lib/components/ui/section-container";
+import { SectionTitle } from "@/lib/components/ui/section-title";
 
 export function ContactSection() {
   return (

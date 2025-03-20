@@ -1,11 +1,11 @@
 "use client";
 
+import { sendContactFormEmail } from "@/lib/actions/sendContactFormEmail";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRight, User, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
 import { useForm } from "react-hook-form";
 import { isMobilePhone } from "validator";
 import { z } from "zod";
-import { sendContactFormEmail } from "../lib/actions/sendContactFormEmail";
 import { Button } from "./ui/button";
 import { LabeledInput } from "./ui/labeled-input";
 

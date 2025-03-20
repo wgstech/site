@@ -1,4 +1,4 @@
-import { LogoWithText } from "@/components/logo-with-text";
+import { LogoWithText } from "@/lib/components/logo-with-text";
 import {
   EnvelopeSimple,
   MapPin,

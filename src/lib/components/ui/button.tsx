@@ -1,5 +1,5 @@
+import { cn } from "@/lib/utils/cn";
 import type { ComponentProps } from "react";
-import { cn } from "../../lib/utils/cn";
 
 type ButtonVariant = "normal" | "outline";
 type ButtonSize = "md" | "lg" | "xl";

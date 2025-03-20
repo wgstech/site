@@ -1,5 +1,5 @@
-import { SectionContainer } from "@/components/ui/section-container";
-import { SectionTitle } from "@/components/ui/section-title";
+import { SectionContainer } from "@/lib/components/ui/section-container";
+import { SectionTitle } from "@/lib/components/ui/section-title";
 
 export function SocialProofSection() {
   return (

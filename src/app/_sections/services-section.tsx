@@ -2,10 +2,10 @@ import classImg from "@/assets/images/cards/class.jpg";
 import consultingImg from "@/assets/images/cards/consulting.jpg";
 import networkImg2 from "@/assets/images/cards/network-2.jpg";
 import technicianImg1 from "@/assets/images/cards/technician-1.jpg";
-import { MotionInView } from "@/components/motion-in-view";
-import { SectionContainer } from "@/components/ui/section-container";
-import { Card } from "../../components/ui/card";
-import { SectionTitle } from "../../components/ui/section-title";
+import { MotionInView } from "@/lib/components/motion-in-view";
+import { Card } from "@/lib/components/ui/card";
+import { SectionContainer } from "@/lib/components/ui/section-container";
+import { SectionTitle } from "@/lib/components/ui/section-title";
 
 export function ServicesSection() {
   return (

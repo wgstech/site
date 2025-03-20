@@ -1,8 +1,8 @@
 "use client";
 
+import { cn } from "@/lib/utils/cn";
 import { useIntersectionObserver } from "@react-hooks-library/core";
 import { type ComponentProps, useRef } from "react";
-import { cn } from "../lib/utils/cn";
 
 export function MotionInView({ className, ...rest }: ComponentProps<"div">) {
   const ref = useRef(null);

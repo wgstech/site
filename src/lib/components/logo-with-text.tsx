@@ -1,4 +1,4 @@
-import { Logo } from "@/components/logo.svg";
+import { Logo } from "@/lib/components/logo.svg";
 import { cn } from "@/lib/utils/cn";
 import Link from "next/link";
 

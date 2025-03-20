@@ -1,4 +1,8 @@
-import { SectionContainer } from "@/components/ui/section-container";
+import { ContactFormModal } from "@/lib/components/contact-form-modal";
+import { MotionInView } from "@/lib/components/motion-in-view";
+import { Button } from "@/lib/components/ui/button";
+import { SectionContainer } from "@/lib/components/ui/section-container";
+import { SectionTitle } from "@/lib/components/ui/section-title";
 import {
   ArrowRight,
   Cloud,
@@ -6,10 +10,6 @@ import {
   LockKey,
   TrendUp,
 } from "@phosphor-icons/react/dist/ssr";
-import { ContactFormModal } from "../../components/contact-form-modal";
-import { MotionInView } from "../../components/motion-in-view";
-import { Button } from "../../components/ui/button";
-import { SectionTitle } from "../../components/ui/section-title";
 import { BenefitCard } from "./components/benefit-card";
 
 export function FeaturesAndBenefits() {
