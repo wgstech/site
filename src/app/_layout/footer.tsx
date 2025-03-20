@@ -22,7 +22,7 @@ export function Footer() {
             em Suporte Técnico de TI
           </p>
         </div>
-        <ul className="group flex flex-col gap-2 justify-self-center">
+        <ul className="group flex flex-col gap-2">
           <h3 className="py-2 text-xl font-bold tracking-wider transition-colors duration-500 group-hover:text-sky-300">
             Contatos
           </h3>
@@ -35,8 +35,10 @@ export function Footer() {
           <li>
             <ExternalLink href="https://maps.app.goo.gl/w62PVnwWYQ8wwXGw7">
               <MapPin weight="light" className="size-6" />
-              <span className="text-balance">
-                R. Edmundo Bitencourt, 59 Várzea, Teresópolis - RJ, 25.953-030
+              <span>
+                Rua Edmundo Bitencourt, 59
+                <br />
+                Várzea, Teresópolis - RJ, 25953-030
               </span>
             </ExternalLink>
           </li>
@@ -51,8 +53,8 @@ export function Footer() {
       <div className="flex items-center justify-evenly border-t border-t-white/15 py-4 text-slate-200">
         <div className="flex flex-col text-[0.625rem] sm:text-xs">
           <span>
-            © {new Date().getFullYear()} WGS Tech. Todos os direitos
-            reservados.
+            © {new Date().getFullYear()} WGS Tech.
+            <br className="sm:hidden" /> Todos os direitos reservados.
           </span>
           <span>[Razão Social] - CNPJ 12.345.678/0001-00</span>
         </div>

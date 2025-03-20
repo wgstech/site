@@ -45,7 +45,7 @@ export function ContactForm({ onSubmit = () => {} }: ContactFormProps) {
         await sendContactFormEmail(data);
         onSubmit();
       })}
-      className="*:mb-5"
+      className="flex flex-col gap-5"
     >
       <LabeledInput
         label="Seu nome"
@@ -71,7 +71,7 @@ export function ContactForm({ onSubmit = () => {} }: ContactFormProps) {
         error={errors.details}
         register={register("details")}
       />
-      <div className="mt-6 flex justify-end">
+      <div className="flex justify-end">
         <Button type="submit" disabled={isSubmitting}>
           <ArrowRight className="size-4" />
           {isSubmitting ? "..." : "Enviar"}

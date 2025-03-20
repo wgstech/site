@@ -12,7 +12,7 @@ export function ServicesSection() {
     <SectionContainer id="serviços">
       <SectionTitle className="text-center">Nossos Serviços</SectionTitle>
       <MotionInView className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-lg motion-delay-200">
-        <p className="mt-2 text-center text-sm text-slate-700">
+        <p className="mt-2 text-center text-slate-700">
           Soluções completas para manter sua infraestrutura funcionando
           perfeitamente.
         </p>
