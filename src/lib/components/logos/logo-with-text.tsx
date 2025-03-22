@@ -1,6 +1,6 @@
-import { Logo } from "@/lib/components/logo.svg";
 import { cn } from "@/lib/utils/cn";
 import Link from "next/link";
+import { Logo } from "./logo.svg";
 
 interface LogoWithTextProps {
   className?: string;

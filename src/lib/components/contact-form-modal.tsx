@@ -26,7 +26,7 @@ export function ContactFormModal({ children }: PropsWithChildren) {
             <Title className="text-lg font-medium text-sky-700">
               Entraremos em contato com você
             </Title>
-            <Description className="mt-2 mb-5 flex items-center gap-3 rounded-lg bg-slate-200 p-2 text-sm leading-normal text-slate-700">
+            <Description className="mt-2 mb-5 flex items-center gap-3 rounded-lg bg-slate-200 p-2 text-sm text-slate-700">
               <WhatsappLogo className="size-7 text-sky-700" weight="light" />
               <span>
                 Ou entre em contato agora no nosso{" "}

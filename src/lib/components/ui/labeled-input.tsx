@@ -72,7 +72,7 @@ function Input({ className, name, ...rest }: ComponentPropsWithRef<"input">) {
   return (
     <input
       className={cn(
-        "focus:ring-logo-orange flex w-full items-center justify-center rounded-lg p-3 leading-none text-slate-700 inset-shadow-sm ring-1 ring-slate-800/10 placeholder:text-slate-400",
+        "focus:ring-logo-orange flex w-full items-center justify-center rounded-lg p-3 text-slate-700 inset-shadow-sm ring-1 ring-slate-800/10 placeholder:text-slate-400",
         className,
       )}
       id={name}

@@ -1,4 +1,4 @@
-import { Navbar } from "@/app/_layout/navbar";
+import { Navbar } from "@/app/(main)/_layout/navbar";
 import { ContactSection } from "./_sections/contact-section";
 import { FeaturesAndBenefits } from "./_sections/features-and-benefits-section";
 import { Hero } from "./_sections/hero";

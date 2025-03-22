@@ -1,4 +1,4 @@
-import { ExternalLink } from "../_layout/components/external-link";
+import { ExternalLink } from "../../../lib/components/ui/external-link";
 
 export default function Toolbox() {
   return (

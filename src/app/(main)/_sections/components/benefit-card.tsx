@@ -23,10 +23,11 @@ export function BenefitCard({
         className,
       )}
     >
-      <Icon weight="fill" className="text-logo-orange size-12 md:size-16" />
-      <h3 className="font-montserrat text-2xl font-semibold text-sky-700 md:text-3xl">
-        {title}
-      </h3>
+      <Icon
+        weight="fill"
+        className="text-logo-orange size-12 md:size-16 lg:size-18"
+      />
+      <h3 className="text-sky-700">{title}</h3>
       {children}
     </MotionInView>
   );

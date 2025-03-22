@@ -27,9 +27,7 @@ export function Card({ img, children, title, className }: CardProps) {
         placeholder="blur"
       />
       <article className="flex flex-1 flex-col px-5 py-4">
-        <h3 className="min-h-[2lh] text-xl font-semibold text-slate-800">
-          {title}
-        </h3>
+        <h4 className="min-h-[2lh] text-slate-800">{title}</h4>
         <p className="mt-2 text-sm text-slate-600">{children}</p>
       </article>
     </MotionInView>

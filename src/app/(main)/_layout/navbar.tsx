@@ -1,4 +1,4 @@
-import { LogoWithText } from "@/lib/components/logo-with-text";
+import { LogoWithText } from "@/lib/components/logos/logo-with-text";
 import { NavLink } from "./components/nav-link";
 
 export function Navbar() {

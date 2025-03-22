@@ -20,11 +20,11 @@ export function Button({
     <button
       type="button"
       className={cn(
-        "flex cursor-pointer items-center justify-center gap-2 leading-0 transition-all transition-discrete",
+        "flex cursor-pointer items-center justify-center gap-2 font-semibold transition-all transition-discrete",
         {
-          "rounded-xl p-3 md:px-4": size === "md",
-          "rounded-2xl p-3 text-lg md:px-4": size === "lg",
-          "rounded-2xl p-4 text-lg md:px-8": size === "xl",
+          "rounded-xl px-3 py-2": size === "md",
+          "rounded-2xl px-4 py-3 text-lg": size === "lg",
+          "rounded-2xl px-5 py-4 text-lg": size === "xl",
         },
         {
           "button-gradient bg-gradient-to-r text-white hover:brightness-125":

@@ -1,12 +1,12 @@
-import { LogoWithText } from "@/lib/components/logo-with-text";
+import { LogoWithText } from "@/lib/components/logos/logo-with-text";
 import {
   EnvelopeSimple,
   MapPin,
   WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr";
-import { ExternalLink } from "./components/external-link";
-import { Instagram } from "./components/logos/instagram.svg";
-import { LinkedIn } from "./components/logos/linkedin.svg";
+import { Instagram } from "../../../lib/components/logos/instagram.svg";
+import { LinkedIn } from "../../../lib/components/logos/linkedin.svg";
+import { ExternalLink } from "../../../lib/components/ui/external-link";
 
 export function Footer() {
   return (
@@ -23,7 +23,7 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="mb-2 py-2 text-xl font-bold tracking-wider transition-colors group-hover:text-sky-300">
+          <h3 className="mb-2 py-2 tracking-wider transition-colors group-hover:text-sky-300">
             Contatos
           </h3>
           <ul className="group flex flex-col gap-2">
