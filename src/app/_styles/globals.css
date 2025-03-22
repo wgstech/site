@@ -59,11 +59,11 @@
     @apply font-bold;
   }
 
-  *:focus {
+  :focus {
     @apply outline-none;
   }
 
-  *:focus-visible {
+  :focus-visible {
     @apply outline-logo-orange outline-2 outline-solid;
   }
 }

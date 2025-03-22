@@ -2,6 +2,8 @@ import { cn } from "@/lib/utils/cn";
 import type { Icon, IconWeight } from "@phosphor-icons/react";
 import type { ComponentPropsWithRef } from "react";
 import type { FieldError } from "react-hook-form";
+import { Input } from "./input";
+import { TextArea } from "./text-area";
 
 interface LabeledInputProps<T extends "input" | "textarea"> {
   label: string;
@@ -67,44 +69,3 @@ export function LabeledInput<T extends "input" | "textarea">({
     </fieldset>
   );
 }
-
-function Input({ className, name, ...rest }: ComponentPropsWithRef<"input">) {
-  return (
-    <input
-      className={cn(
-        "focus:ring-logo-orange flex w-full items-center justify-center rounded-lg p-3 text-slate-700 inset-shadow-sm ring-1 ring-slate-800/10 placeholder:text-slate-400",
-        className,
-      )}
-      id={name}
-      name={name}
-      {...rest}
-    />
-  );
-}
-
-function TextArea({
-  className,
-  name,
-  ...rest
-}: ComponentPropsWithRef<"textarea">) {
-  return (
-    <textarea
-      className={cn(
-        "focus:ring-logo-orange mt-1 field-sizing-content max-h-[5lh] min-h-[3lh] w-full resize-none rounded-lg p-2 text-wrap text-slate-700 inset-shadow-sm ring-1 ring-slate-800/10 placeholder:text-slate-400",
-        className,
-      )}
-      id={name}
-      name={name}
-      {...rest}
-    />
-  );
-}
-
-/*
-  <textarea
-    className="mt-1 resize-none text-wrap field-sizing-content w-full min-h-[3lh] max-h-[5lh] rounded-lg p-2 text-slate-700 placeholder:text-slate-400 inset-shadow-sm ring-1 ring-slate-800/10 focus:ring-logo-orange"
-    id={name}
-    name={name}
-    {...rest}
-  />
-*/
