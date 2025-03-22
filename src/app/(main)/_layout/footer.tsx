@@ -22,11 +22,11 @@ export function Footer() {
             em Suporte Técnico de TI
           </p>
         </div>
-        <div>
-          <h3 className="mb-2 py-2 tracking-wider transition-colors group-hover:text-sky-300">
+        <div className="group">
+          <h4 className="mb-2 py-2 tracking-wide transition-colors group-hover:text-sky-300">
             Contatos
-          </h3>
-          <ul className="group flex flex-col gap-2">
+          </h4>
+          <ul className="flex flex-col gap-2">
             <li>
               <ExternalLink href="mailto:contato@wgstech.com.br">
                 <EnvelopeSimple weight="light" className="size-6" />
