@@ -73,8 +73,8 @@ export function ContactForm({ onSubmit = () => {} }: ContactFormProps) {
       />
       <div className="flex justify-end">
         <Button type="submit" disabled={isSubmitting}>
-          <ArrowRight className="size-4" />
           {isSubmitting ? "..." : "Enviar"}
+          <ArrowRight className="size-4" weight="bold" />
         </Button>
       </div>
     </form>

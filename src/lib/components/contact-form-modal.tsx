@@ -23,10 +23,13 @@ export function ContactFormModal({ children }: PropsWithChildren) {
       <Portal>
         <Overlay className="data-[state=open]:motion-preset-fade-sm fixed inset-0 z-90 bg-black/65">
           <Content className="data-[state=open]:motion-preset-focus-sm fixed top-1/2 left-1/2 z-100 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-100 p-[25px] shadow">
-            <Title className="text-lg font-medium text-sky-700">
+            <Title className="text-xl font-medium text-sky-700">
               Entraremos em contato com você
             </Title>
-            <Description className="mt-2 mb-5 flex items-center gap-3 rounded-lg bg-slate-200 p-2 text-sm text-slate-700">
+            <Description className="text-xs text-slate-500">
+              Não compartilharemos seus dados com ninguém.
+            </Description>
+            <div className="my-5 flex items-center gap-3 rounded-lg bg-slate-200 p-2 text-sm text-slate-700">
               <WhatsappLogo className="size-7 text-sky-700" weight="light" />
               <span>
                 Ou entre em contato agora no nosso{" "}
@@ -39,7 +42,7 @@ export function ContactFormModal({ children }: PropsWithChildren) {
                   WhatsApp.
                 </a>
               </span>
-            </Description>
+            </div>
             <ContactForm onSubmit={() => setOpen(false)} />
             <Close asChild>
               <button
