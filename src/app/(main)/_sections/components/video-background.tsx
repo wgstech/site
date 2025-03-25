@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export function VideoBackground() {
   return (
-    <div className="absolute inset-0 -z-10 size-full" aria-hidden="true">
+    <div
+      className="absolute inset-0 -z-10 size-full max-h-screen"
+      aria-hidden="true"
+    >
       <Image
         src={landingPageImg}
         width={landingPageImg.width}
@@ -18,7 +21,7 @@ export function VideoBackground() {
         loop
         autoPlay
         muted
-        className="absolute inset-0 size-full object-cover"
+        className="absolute inset-0 z-10 size-full object-cover"
       >
         <source
           type="video/webm; codecs=av1"
@@ -33,7 +36,7 @@ export function VideoBackground() {
           src="/video/landing-page-h264-optimized.mp4"
         />
       </video>
-      <CaretDown className="motion-duration-2000 motion-safe:motion-preset-oscillate-lg absolute bottom-8 left-1/2 size-9 -translate-x-1/2 text-slate-100" />
+      <CaretDown className="motion-duration-2000 motion-safe:motion-preset-oscillate-lg absolute bottom-8 left-1/2 z-20 size-9 -translate-x-1/2 text-slate-100" />
     </div>
   );
 }

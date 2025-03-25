@@ -1,12 +1,10 @@
 import { ContactFormModal } from "@/lib/components/contact-form-modal";
 import { Button } from "@/lib/components/ui/button";
 import { Phone } from "@phosphor-icons/react/dist/ssr";
-import { VideoBackground } from "./components/video-background";
 
 export function Hero() {
   return (
     <section className="flex flex-1 flex-col items-center justify-center gap-4 bg-transparent p-8 text-slate-100">
-      <VideoBackground />
       <h1 className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-lg text-center text-pretty">
         Otimize Sua Infraestrutura de TI e Reduza Custos
       </h1>
