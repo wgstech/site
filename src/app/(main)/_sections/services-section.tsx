@@ -2,21 +2,19 @@ import classImg from "@/assets/images/cards/class.jpg";
 import consultingImg from "@/assets/images/cards/consulting.jpg";
 import networkImg2 from "@/assets/images/cards/network-2.jpg";
 import technicianImg1 from "@/assets/images/cards/technician-1.jpg";
-import { MotionInView } from "@/lib/components/motion-in-view";
 import { Card } from "@/lib/components/ui/card";
 import { SectionContainer } from "@/lib/components/ui/section-container";
+import { SectionSubtitle } from "@/lib/components/ui/section-subtitle";
 import { SectionTitle } from "@/lib/components/ui/section-title";
 
 export function ServicesSection() {
   return (
     <SectionContainer id="serviços">
       <SectionTitle className="text-center">Nossos Serviços</SectionTitle>
-      <MotionInView className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-lg motion-delay-200">
-        <p className="mt-2 text-center text-slate-700">
-          Soluções completas para manter sua infraestrutura funcionando
-          perfeitamente.
-        </p>
-      </MotionInView>
+      <SectionSubtitle>
+        Soluções completas para manter sua infraestrutura funcionando
+        perfeitamente.
+      </SectionSubtitle>
       <div className="justify-content-between mt-10 grid grid-cols-1 place-content-center content-between justify-center gap-16 md:grid-cols-2 lg:grid-cols-4">
         <Card
           img={technicianImg1}
@@ -58,12 +56,3 @@ export function ServicesSection() {
     </SectionContainer>
   );
 }
-
-/* 
-Suporte Técnico: (Imagem de um técnico) - Resolvemos seus problemas de TI rapidamente.
-Gestão de Redes: (Imagem de uma rede) - Otimizamos sua rede para o melhor desempenho.
-Laudos Técnicos: (Imagem de um diagnóstico) - Identificamos e solucionamos problemas complexos.
-Formatação e Instalação: (Imagem de um sistema operacional) - Mantemos seus sistemas operacionais atualizados.
-Monitoramento de Ativos: (Imagem de um gráfico) - Monitoramos sua infraestrutura para evitar problemas.
-
-*/
