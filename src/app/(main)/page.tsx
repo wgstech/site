@@ -3,6 +3,7 @@ import { VideoBackground } from "./_sections/components/video-background";
 import { ContactSection } from "./_sections/contact-section";
 import { FeaturesAndBenefits } from "./_sections/features-and-benefits-section";
 import { Hero } from "./_sections/hero";
+import { PricingSection } from "./_sections/pricing-section";
 import { ServicesSection } from "./_sections/services-section";
 import { SocialProofSection } from "./_sections/social-proof-section";
 
@@ -17,6 +18,7 @@ export default function Home() {
       <FeaturesAndBenefits />
       <SocialProofSection />
       <ServicesSection />
+      <PricingSection />
       <ContactSection />
     </main>
   );
