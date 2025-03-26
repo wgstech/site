@@ -2,7 +2,12 @@
 
 import { sendContactFormEmail } from "@/lib/actions/sendContactFormEmail";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { ArrowRight, User, WhatsappLogo } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowRight,
+  CircleNotch,
+  User,
+  WhatsappLogo,
+} from "@phosphor-icons/react/dist/ssr";
 import { useForm } from "react-hook-form";
 import { isMobilePhone } from "validator";
 import { z } from "zod";
@@ -77,8 +82,16 @@ export function ContactForm({
       />
       <div className="flex justify-end">
         <Button type="submit" disabled={isSubmitting}>
-          {isSubmitting ? "..." : "Enviar"}
-          <ArrowRight className="size-4" weight="bold" />
+          {isSubmitting ? (
+            <>
+              Enviar{" "}
+              <CircleNotch className="size-4 animate-spin" weight="bold" />
+            </>
+          ) : (
+            <>
+              Enviar <ArrowRight className="size-4" weight="bold" />
+            </>
+          )}
         </Button>
       </div>
     </form>
