@@ -14,7 +14,11 @@ import {
 import { type PropsWithChildren, useState } from "react";
 import { ContactForm } from "./contact-form";
 
-export function ContactFormModal({ children }: PropsWithChildren) {
+interface ContactFormModalProps extends PropsWithChildren {
+  details?: string;
+}
+
+export function ContactFormModal({ children, details }: ContactFormModalProps) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -43,7 +47,7 @@ export function ContactFormModal({ children }: PropsWithChildren) {
                 </a>
               </span>
             </div>
-            <ContactForm onSubmit={() => setOpen(false)} />
+            <ContactForm onSubmit={() => setOpen(false)} details={details} />
             <Close asChild>
               <button
                 type="button"

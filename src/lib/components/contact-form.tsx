@@ -11,6 +11,7 @@ import { LabeledInput } from "./ui/labeled-input";
 
 interface ContactFormProps {
   onSubmit?: () => void;
+  details?: string | undefined;
 }
 
 const formSchema = z.object({
@@ -25,7 +26,10 @@ const formSchema = z.object({
   details: z.string().trim().min(10, "Deve conter no mínimo dez caracteres"),
 });
 
-export function ContactForm({ onSubmit = () => {} }: ContactFormProps) {
+export function ContactForm({
+  onSubmit = () => {},
+  details,
+}: ContactFormProps) {
   const {
     register,
     handleSubmit,
@@ -35,7 +39,7 @@ export function ContactForm({ onSubmit = () => {} }: ContactFormProps) {
     defaultValues: {
       name: "",
       phone: "",
-      details: "",
+      details: details ?? "",
     },
   });
 

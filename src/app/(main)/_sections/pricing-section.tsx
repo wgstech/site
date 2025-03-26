@@ -104,7 +104,7 @@ function PricingCard({
           {custom || "/mês"}
         </span>
       </p>
-      <ContactFormModal>
+      <ContactFormModal details={`Estou interessado no plano ${title}.`}>
         <button
           type="button"
           className={cn(
