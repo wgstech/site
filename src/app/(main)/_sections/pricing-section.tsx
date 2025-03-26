@@ -3,7 +3,7 @@ import { SectionContainer } from "@/lib/components/ui/section-container";
 import { SectionSubtitle } from "@/lib/components/ui/section-subtitle";
 import { SectionTitle } from "@/lib/components/ui/section-title";
 import { cn } from "@/lib/utils/cn";
-import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
+import { CheckCircle, PlusCircle } from "@phosphor-icons/react/dist/ssr";
 import type { PropsWithChildren } from "react";
 
 export function PricingSection() {
@@ -13,8 +13,10 @@ export function PricingSection() {
         Nossos Preços
       </p>
       <SectionTitle>Preços Transparentes para Sua Tranquilidade</SectionTitle>
-      <SectionSubtitle className="mx-auto mt-6 max-w-2xl text-lg font-medium text-pretty">
-        Escolha o plano que melhor se adapta às suas necessidades e orçamento
+      <SectionSubtitle className="mx-auto mt-6 max-w-2xl text-lg font-medium">
+        Escolha o plano que melhor se adapta às suas necessidades.
+        <br />
+        Cancele a qualquer momento.
       </SectionSubtitle>
 
       <div className="mt-4 grid max-w-sm grid-cols-1 gap-y-16 max-md:divide-y sm:mx-auto lg:-mx-8 lg:mt-20 lg:max-w-none lg:grid-cols-3 lg:divide-x xl:-mx-4">
@@ -28,6 +30,9 @@ export function PricingSection() {
           <PricingItem>
             Monitoramento, Manutenção e Patching de até{" "}
             <strong className="text-sky-800">2</strong> máquinas
+          </PricingItem>
+          <PricingItem variant="plus">
+            Máquinas adicionais por <strong>R$ 60/mês</strong> cada.
           </PricingItem>
         </PricingCard>
         <PricingCard
@@ -50,6 +55,9 @@ export function PricingSection() {
           <PricingItem>Gerenciamento completo de Backups</PricingItem>
           <PricingItem>
             Treinamento de conscientização sobre segurança
+          </PricingItem>
+          <PricingItem variant="plus">
+            Máquinas adicionais por <strong>R$ 80/mês</strong> cada.
           </PricingItem>
         </PricingCard>
         <PricingCard
@@ -121,10 +129,23 @@ function PricingCard({
   );
 }
 
-function PricingItem({ children }: PropsWithChildren) {
+interface PricingItemProps extends PropsWithChildren {
+  variant?: "check" | "plus";
+}
+
+function PricingItem({ children, variant = "check" }: PricingItemProps) {
   return (
     <li className="flex gap-x-3">
-      <CheckCircle weight="fill" className="size-5 flex-none text-amber-600" />
+      {variant === "check" && (
+        <CheckCircle
+          weight="fill"
+          className="size-5 flex-none text-amber-600"
+        />
+      )}
+      {variant === "plus" && (
+        <PlusCircle weight="fill" className="size-5 flex-none text-slate-500" />
+      )}
+
       <span>{children}</span>
     </li>
   );
