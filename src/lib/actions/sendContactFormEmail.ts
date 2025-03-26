@@ -1,6 +1,9 @@
 "use server";
 
-import { setTimeout } from "node:timers";
+import dedent from "dedent";
+import { v4 as uuid } from "uuid";
+import { env } from "../services/env";
+import { resend } from "../services/resend";
 
 interface Data {
   name: string;
@@ -8,12 +11,32 @@ interface Data {
   details: string;
 }
 
-export async function sendContactFormEmail(data: Data) {
-  await wait();
-  console.log(data);
-  return data;
-}
+const destinations: Record<typeof env.NODE_ENV, string> = {
+  development: "delivered@resend.dev",
+  test: "delivered@resend.dev", // "bounced@resend.dev" or "complained@resend.dev" to test errors
+  production: "leonardogurgelmf@gmail.com",
+};
 
-function wait(time = 1000) {
-  return new Promise((res) => setTimeout(res, time));
+const to = destinations[env.NODE_ENV];
+
+export async function sendContactFormEmail(data: Data) {
+  const response = await resend.emails.send({
+    from: "WGS Tech Landing Page <noreply@gurgel.io>",
+    to,
+    subject: `Novo Lead: ${data.name}`,
+    text: dedent`
+      Um novo lead foi gerado através do formulário de contato do site:
+
+      Nome: ${data.name}
+      Telefone: ${data.phone}
+
+      "${data.details}"
+    `,
+    headers: {
+      "X-Entity-Ref-ID": uuid(),
+    },
+  });
+
+  console.log(response);
+  return response;
 }
