@@ -29,7 +29,7 @@ export function ContactFormModal({ children }: PropsWithChildren) {
             <Description className="text-xs text-slate-500">
               Não compartilharemos seus dados com ninguém.
             </Description>
-            <div className="my-5 flex items-center gap-3 rounded-lg bg-slate-200 p-2 text-sm text-slate-700">
+            <div className="my-5 flex items-center gap-3 rounded-xl bg-slate-200 p-2 text-sm text-slate-700">
               <WhatsappLogo className="size-7 text-sky-700" weight="light" />
               <span>
                 Ou entre em contato agora no nosso{" "}

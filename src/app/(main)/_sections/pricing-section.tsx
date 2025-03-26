@@ -108,7 +108,7 @@ function PricingCard({
         <button
           type="button"
           className={cn(
-            "from-logo-blue mt-10 block w-full cursor-pointer rounded-md bg-linear-to-r/oklch to-sky-700 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-xs transition-all hover:brightness-125",
+            "from-logo-blue mt-10 block w-full cursor-pointer rounded-xl bg-linear-to-r/oklch to-sky-700 px-3 py-2 text-center text-sm/6 font-semibold text-white shadow-xs transition-all hover:brightness-125",
             custom && "to-logo-orange from-logo-blue via-purple-500",
           )}
         >

@@ -25,7 +25,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/"
-          className="mt-10 flex items-center gap-1 rounded-md text-sm/7 font-semibold text-sky-700"
+          className="mt-10 flex items-center gap-1 rounded-xl text-sm/7 font-semibold text-sky-700"
         >
           <ArrowLeft className="inline" weight="bold" /> Voltar ao início
         </Link>
