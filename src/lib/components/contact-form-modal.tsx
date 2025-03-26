@@ -11,22 +11,30 @@ import {
   Title,
   Trigger,
 } from "@radix-ui/react-dialog";
+import {} from "@radix-ui/react-toast";
 import { type PropsWithChildren, useState } from "react";
 import { ContactForm } from "./contact-form";
+import { Toast } from "./ui/toast";
 
 interface ContactFormModalProps extends PropsWithChildren {
   details?: string;
 }
 
 export function ContactFormModal({ children, details }: ContactFormModalProps) {
-  const [open, setOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [toastOpen, setToastOpen] = useState(false);
+
+  const onSubmit = () => {
+    setModalOpen(false);
+    setToastOpen(true);
+  };
 
   return (
-    <Root open={open} onOpenChange={setOpen}>
+    <Root open={modalOpen} onOpenChange={setModalOpen}>
       <Trigger asChild>{children}</Trigger>
       <Portal>
-        <Overlay className="data-[state=open]:motion-preset-fade-sm fixed inset-0 z-90 bg-black/65">
-          <Content className="data-[state=open]:motion-preset-focus-sm fixed top-1/2 left-1/2 z-100 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-50 p-[25px] shadow">
+        <Overlay className="data-[state=open]:motion-preset-fade-sm data-[state=closed]:motion-opacity-out fixed inset-0 z-90 bg-black/65">
+          <Content className="data-[state=open]:motion-preset-focus-sm data-[state=closed]:motion-blur-out-sm fixed top-1/2 left-1/2 z-100 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-50 p-[25px] shadow">
             <Title className="text-xl font-medium text-sky-700">
               Entraremos em contato com você
             </Title>
@@ -47,7 +55,7 @@ export function ContactFormModal({ children, details }: ContactFormModalProps) {
                 </a>
               </span>
             </div>
-            <ContactForm onSubmit={() => setOpen(false)} details={details} />
+            <ContactForm onSubmit={onSubmit} details={details} />
             <Close asChild>
               <button
                 type="button"
@@ -60,6 +68,12 @@ export function ContactFormModal({ children, details }: ContactFormModalProps) {
           </Content>
         </Overlay>
       </Portal>
+      <Toast
+        title="Obrigado!"
+        description="Sua mensagem foi enviada com sucesso. Entraremos em contato em breve."
+        open={toastOpen}
+        onOpenChange={setToastOpen}
+      />
     </Root>
   );
 }
