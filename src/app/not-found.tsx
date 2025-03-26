@@ -8,7 +8,7 @@ import "./_styles/globals.css";
 
 export default function NotFound() {
   return (
-    <div className="grid h-screen w-screen grid-cols-1 grid-rows-[1fr_auto_1fr] bg-slate-100 text-slate-900 lg:grid-cols-[max(50%,_36rem)_1fr]">
+    <div className="grid h-screen w-screen grid-cols-1 grid-rows-[1fr_auto_1fr] bg-slate-50 text-slate-900 lg:grid-cols-[max(50%,_36rem)_1fr]">
       <header className="p-8">
         <Link href="/">
           <span className="sr-only">WGS Tech</span>

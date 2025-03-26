@@ -2,7 +2,7 @@ import classImg from "@/assets/images/cards/class.jpg";
 import consultingImg from "@/assets/images/cards/consulting.jpg";
 import networkImg2 from "@/assets/images/cards/network-2.jpg";
 import technicianImg1 from "@/assets/images/cards/technician-1.jpg";
-import { Card } from "@/lib/components/ui/card";
+import { ServiceCard } from "@/lib/components/ui/card";
 import { SectionContainer } from "@/lib/components/ui/section-container";
 import { SectionSubtitle } from "@/lib/components/ui/section-subtitle";
 import { SectionTitle } from "@/lib/components/ui/section-title";
@@ -10,13 +10,18 @@ import { SectionTitle } from "@/lib/components/ui/section-title";
 export function ServicesSection() {
   return (
     <SectionContainer id="serviços">
-      <SectionTitle className="text-center">Nossos Serviços</SectionTitle>
+      <p className="text-center text-base/7 font-semibold text-slate-700">
+        Nossos Serviços
+      </p>
+      <SectionTitle className="text-center">
+        Tudo Que Sua Empresa Precisa em TI
+      </SectionTitle>
       <SectionSubtitle>
         Soluções completas para manter sua infraestrutura funcionando
         perfeitamente.
       </SectionSubtitle>
-      <div className="justify-content-between mt-10 grid grid-cols-1 place-content-center content-between justify-center gap-16 md:grid-cols-2 lg:grid-cols-4">
-        <Card
+      <div className="justify-content-between mt-20 grid grid-cols-1 place-content-center content-between justify-center gap-16 md:grid-cols-2 lg:grid-cols-4">
+        <ServiceCard
           img={technicianImg1}
           title="Suporte Técnico"
           className="motion-delay-500"
@@ -24,8 +29,8 @@ export function ServicesSection() {
           Tenha a tranquilidade de saber que sua TI está em boas mãos. Suporte
           técnico proativo e soluções eficientes para empresas e residências.
           Foco em resolver, para você focar no que importa.
-        </Card>
-        <Card
+        </ServiceCard>
+        <ServiceCard
           img={networkImg2}
           title="Gestão de Rede"
           className="motion-delay-600"
@@ -33,8 +38,8 @@ export function ServicesSection() {
           Especialistas em redes para otimizar sua conexão. Configuração de
           roteadores, dimensionamento de Wi-Fi e gerenciamento completo da sua
           rede. Conte com quem entende do assunto.
-        </Card>
-        <Card
+        </ServiceCard>
+        <ServiceCard
           img={consultingImg}
           title="Consultoria Avançada em TI"
           className="motion-delay-700"
@@ -42,8 +47,8 @@ export function ServicesSection() {
           Consultoria de TI para resolver seus desafios e otimizar sua
           infraestrutura. Diagnósticos precisos, recomendações personalizadas e
           soluções eficientes para o seu negócio.
-        </Card>
-        <Card
+        </ServiceCard>
+        <ServiceCard
           img={classImg}
           title="Treinamento em Segurança da Informação"
           className="motion-delay-800"
@@ -51,7 +56,7 @@ export function ServicesSection() {
           Prepare seus funcionários para se defender contra phishing, ransomware
           e outras ameaças online! Reduza o risco de ataques e proteja os dados
           da sua empresa com um treinamento rápido e eficaz.
-        </Card>
+        </ServiceCard>
       </div>
     </SectionContainer>
   );

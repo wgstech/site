@@ -8,16 +8,15 @@ export function SectionTitle({
   ...rest
 }: ComponentProps<"h2">) {
   return (
-    <MotionInView className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up">
-      <h2
-        className={cn(
-          "text-center text-3xl font-semibold text-sky-700 lg:text-4xl",
-          className,
-        )}
-        {...rest}
-      >
-        {children}
-      </h2>
+    <MotionInView
+      className={cn(
+        "motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up text-center text-3xl font-semibold text-sky-700 lg:text-4xl",
+        className,
+      )}
+      as="h2"
+      {...rest}
+    >
+      {children}
     </MotionInView>
   );
 }

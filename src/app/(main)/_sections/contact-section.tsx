@@ -9,7 +9,7 @@ export function ContactSection() {
       id="contato"
       className="bg-gradient-to-br from-sky-500 to-cyan-700"
     >
-      <div className="rounded-2xl bg-slate-100 p-10 shadow-md transition-shadow focus-within:shadow-2xl hover:shadow-2xl">
+      <div className="rounded-2xl bg-slate-50 p-10 shadow-md transition-shadow focus-within:shadow-2xl hover:shadow-2xl">
         <SectionTitle>Entraremos em contato com você</SectionTitle>
         <SectionSubtitle className="text-slate-500">
           Não compartilharemos seus dados com ninguém.

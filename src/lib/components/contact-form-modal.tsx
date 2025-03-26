@@ -26,7 +26,7 @@ export function ContactFormModal({ children, details }: ContactFormModalProps) {
       <Trigger asChild>{children}</Trigger>
       <Portal>
         <Overlay className="data-[state=open]:motion-preset-fade-sm fixed inset-0 z-90 bg-black/65">
-          <Content className="data-[state=open]:motion-preset-focus-sm fixed top-1/2 left-1/2 z-100 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-100 p-[25px] shadow">
+          <Content className="data-[state=open]:motion-preset-focus-sm fixed top-1/2 left-1/2 z-100 max-h-[85vh] w-[90vw] max-w-2xl -translate-1/2 rounded-xl bg-slate-50 p-[25px] shadow">
             <Title className="text-xl font-medium text-sky-700">
               Entraremos em contato com você
             </Title>

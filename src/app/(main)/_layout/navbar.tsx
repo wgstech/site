@@ -3,7 +3,7 @@ import { NavLink } from "./components/nav-link";
 
 export function Navbar() {
   return (
-    <header className="w-full text-slate-100">
+    <header className="w-full text-slate-50">
       <nav className="container mx-auto flex items-center justify-between px-4 transition-colors">
         <LogoWithText />
         <div className="flex flex-1 items-center justify-end gap-8">

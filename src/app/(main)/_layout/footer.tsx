@@ -10,7 +10,7 @@ import { ExternalLink } from "../../../lib/components/ui/external-link";
 
 export function Footer() {
   return (
-    <footer className="w-full bg-slate-800 text-slate-100">
+    <footer className="w-full bg-slate-800 text-slate-50">
       <div className="mx-auto flex justify-center py-10 sm:justify-evenly">
         <div className="hidden flex-col self-center sm:flex">
           <LogoWithText

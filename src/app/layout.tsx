@@ -31,14 +31,13 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <head>
-        <link rel="preconnect" href="https://rsms.me" crossOrigin="anonymous" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
         />
       </head>
-      <body className="min-h-screen scroll-smooth bg-slate-100 text-slate-900 antialiased">
+      <body className="min-h-screen scroll-smooth bg-slate-50 text-slate-900 antialiased">
         {children}
         <Analytics />
         <SpeedInsights />

@@ -22,6 +22,7 @@ export function BenefitCard({
         "motion-safe:motion-preset-fade-lg motion-safe:motion-slide-up-lg",
         className,
       )}
+      as="article"
     >
       <Icon
         weight="fill"

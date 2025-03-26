@@ -8,7 +8,7 @@ export function SectionContainer({
   ...rest
 }: ComponentProps<"section">) {
   return (
-    <div className={cn("w-full bg-slate-100 px-2 py-30", className)}>
+    <div className={cn("w-full px-2 py-30", className)}>
       <section id={id} className="container mx-auto" {...rest}>
         {children}
       </section>

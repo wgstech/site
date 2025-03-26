@@ -8,12 +8,12 @@ import type { PropsWithChildren } from "react";
 
 export function PricingSection() {
   return (
-    <SectionContainer>
+    <SectionContainer id="precos" className="bg-white">
       <p className="text-center text-base/7 font-semibold text-slate-700">
         Nossos Preços
       </p>
       <SectionTitle>Preços Transparentes para Sua Tranquilidade</SectionTitle>
-      <SectionSubtitle className="mx-auto mt-6 max-w-2xl text-lg font-medium">
+      <SectionSubtitle>
         Escolha o plano que melhor se adapta às suas necessidades.
         <br />
         Cancele a qualquer momento.
