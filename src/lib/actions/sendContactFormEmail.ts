@@ -21,7 +21,7 @@ const to = destinations[env.NODE_ENV];
 
 export async function sendContactFormEmail(data: Data) {
   const response = await resend.emails.send({
-    from: "WGS Tech Landing Page <noreply@gurgel.io>",
+    from: "WGS Tech Landing Page <wgstech@gurgel.io>",
     to,
     subject: `Novo Lead: ${data.name}`,
     text: dedent`
