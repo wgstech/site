@@ -5,7 +5,7 @@ export function SocialProofSection() {
   return (
     <SectionContainer
       id="prova-social"
-      className="brand-gradient h-[90vh] bg-gradient-to-br text-white"
+      className="h-[90vh] bg-gradient-to-br from-sky-500 to-cyan-700 text-white"
     >
       <SectionTitle className="text-slate-100">TODO: prova social</SectionTitle>
     </SectionContainer>

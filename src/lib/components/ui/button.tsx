@@ -27,7 +27,7 @@ export function Button({
           "px-5 py-4 text-lg": size === "xl",
         },
         {
-          "button-gradient bg-gradient-to-r text-white hover:brightness-125":
+          "bg-gradient-to-r from-sky-500 to-cyan-700 text-white hover:brightness-125":
             variant === "normal",
           "border border-sky-600 bg-transparent text-sky-600 hover:border-sky-700 hover:bg-sky-700 hover:text-white":
             variant === "outline",
