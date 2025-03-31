@@ -20,7 +20,7 @@ export function Button({
     <button
       type="button"
       className={cn(
-        "flex cursor-pointer items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",
+        "flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",
         {
           "px-3 py-2": size === "md",
           "px-4 py-3 text-lg": size === "lg",

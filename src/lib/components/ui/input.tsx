@@ -9,7 +9,7 @@ export function Input({
   return (
     <input
       className={cn(
-        "focus:ring-logo-orange flex w-full items-center justify-center rounded-xl p-3 text-slate-700 inset-shadow-sm ring-2 ring-slate-800/10 placeholder:text-slate-400 focus-visible:outline-none",
+        "focus:ring-logo-orange flex w-full items-center justify-center rounded-xl p-3 text-slate-700 ring-2 inset-shadow-sm ring-slate-800/10 focus-visible:outline-none",
         className,
       )}
       id={name}
