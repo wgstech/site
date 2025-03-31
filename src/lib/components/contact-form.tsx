@@ -49,7 +49,7 @@ export function ContactForm({
     },
   });
 
-  const handleFormSubmit = handleSubmit((data) => {
+  const handleFormSubmit = handleSubmit((data) =>
     toast.promise(sendContactFormEmail(data).then(onSubmit), {
       loading: "Enviando...",
       success: () => (
@@ -59,20 +59,9 @@ export function ContactForm({
           Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.
         </span>
       ),
-      error: () => (
-        <span>
-          Ocorreu um erro ao salvar o formulário!
-          <a
-            href="https://wa.me/5521978838514"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Entrar em contato diretamente pelo WhatsApp
-          </a>
-        </span>
-      ),
-    });
-  });
+      error: () => <span>Ocorreu um erro ao salvar o formulário!</span>,
+    }),
+  );
 
   return (
     <form onSubmit={handleFormSubmit} className="flex flex-col gap-5">

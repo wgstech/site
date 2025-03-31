@@ -37,6 +37,7 @@ export async function sendContactFormEmail(data: Data) {
     },
   });
 
-  console.log(response);
-  return response;
+  if (response.error) throw response.error;
+
+  return response.data;
 }
