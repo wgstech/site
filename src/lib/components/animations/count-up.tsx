@@ -8,13 +8,11 @@ import { useEffect } from "react";
 interface CountUpProps {
   from?: number;
   to: number;
-  duration?: number;
+  duration: number;
 }
 
-export function CountUp({ from = 0, to, duration = 2 }: CountUpProps) {
-  const [ref, didIntersect] = useIntersectionOnce({
-    threshold: 0.3,
-  });
+export function CountUp({ from = 0, to, duration }: CountUpProps) {
+  const [ref, didIntersect] = useIntersectionOnce();
 
   useEffect(() => {
     if (ref.current == null || !didIntersect || prefersReducedMotion()) return;

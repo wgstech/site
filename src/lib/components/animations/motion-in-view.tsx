@@ -11,11 +11,10 @@ type MotionInViewProps<T extends ElementType> = ComponentProps<T> & {
 
 export function MotionInView<T extends ElementType = "div">({
   className,
-  threshold = 0.3,
   as = "div",
   ...rest
 }: MotionInViewProps<T>) {
-  const [ref, didIntersect] = useIntersectionOnce({ threshold });
+  const [ref, didIntersect] = useIntersectionOnce();
   const Component = as;
 
   return (
