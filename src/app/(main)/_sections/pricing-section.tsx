@@ -1,7 +1,7 @@
 import { ContactFormModal } from "@/lib/components/contact-form-modal";
 import { SectionContainer } from "@/lib/components/ui/section-container";
-import { SectionSubtitle } from "@/lib/components/ui/section-subtitle";
-import { SectionTitle } from "@/lib/components/ui/section-title";
+import { AnimatedSectionSubtitle } from "@/lib/components/ui/section-subtitle";
+import { AnimatedSectionTitle } from "@/lib/components/ui/section-title";
 import { cn } from "@/lib/utils/cn";
 import { CheckCircle, PlusCircle } from "@phosphor-icons/react/dist/ssr";
 import type { PropsWithChildren } from "react";
@@ -9,15 +9,14 @@ import type { PropsWithChildren } from "react";
 export function PricingSection() {
   return (
     <SectionContainer id="precos" className="bg-white">
-      <p className="text-center text-base/7 font-semibold text-slate-700">
-        Nossos Preços
-      </p>
-      <SectionTitle>Preços Transparentes para Sua Tranquilidade</SectionTitle>
-      <SectionSubtitle>
+      <AnimatedSectionTitle>
+        Preços Transparentes para Sua Tranquilidade
+      </AnimatedSectionTitle>
+      <AnimatedSectionSubtitle>
         Escolha o plano que melhor se adapta às suas necessidades.
         <br />
         Cancele a qualquer momento.
-      </SectionSubtitle>
+      </AnimatedSectionSubtitle>
 
       <div className="mt-4 grid max-w-sm grid-cols-1 gap-y-16 max-md:divide-y sm:mx-auto lg:-mx-8 lg:mt-20 lg:max-w-none lg:grid-cols-3 lg:divide-x xl:-mx-4">
         <PricingCard

@@ -9,6 +9,7 @@ import {
   WhatsappLogo,
 } from "@phosphor-icons/react/dist/ssr";
 import { useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 import { isMobilePhone } from "validator";
 import { z } from "zod";
 import { Button } from "./ui/button";
@@ -48,14 +49,33 @@ export function ContactForm({
     },
   });
 
+  const handleFormSubmit = handleSubmit((data) => {
+    toast.promise(sendContactFormEmail(data).then(onSubmit), {
+      loading: "Enviando...",
+      success: () => (
+        <span>
+          <strong>Obrigado!</strong>
+          <br />
+          Sua mensagem foi enviada com sucesso. Entraremos em contato em breve.
+        </span>
+      ),
+      error: () => (
+        <span>
+          Ocorreu um erro ao salvar o formulário!
+          <a
+            href="https://wa.me/5521978838514"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Entrar em contato diretamente pelo WhatsApp
+          </a>
+        </span>
+      ),
+    });
+  });
+
   return (
-    <form
-      onSubmit={handleSubmit(async (data) => {
-        await sendContactFormEmail(data);
-        onSubmit();
-      })}
-      className="flex flex-col gap-5"
-    >
+    <form onSubmit={handleFormSubmit} className="flex flex-col gap-5">
       <LabeledInput
         label="Seu nome"
         Icon={User}

@@ -1,15 +1,9 @@
-"use client";
-
 import { ContactForm } from "@/lib/components/contact-form";
 import { SectionContainer } from "@/lib/components/ui/section-container";
 import { SectionSubtitle } from "@/lib/components/ui/section-subtitle";
 import { SectionTitle } from "@/lib/components/ui/section-title";
-import { Toast } from "@/lib/components/ui/toast";
-import { useState } from "react";
 
 export function ContactSection() {
-  const [toastOpen, setToastOpen] = useState(false);
-
   return (
     <SectionContainer
       id="contato"
@@ -21,14 +15,8 @@ export function ContactSection() {
           Não compartilharemos seus dados com ninguém.
         </SectionSubtitle>
 
-        <ContactForm onSubmit={() => setToastOpen(true)} />
+        <ContactForm />
       </div>
-      <Toast
-        title="Obrigado!"
-        description="Sua mensagem foi enviada com sucesso. Entraremos em contato em breve."
-        open={toastOpen}
-        onOpenChange={setToastOpen}
-      />
     </SectionContainer>
   );
 }

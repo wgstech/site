@@ -5,10 +5,10 @@ import { Phone } from "@phosphor-icons/react/dist/ssr";
 export function Hero() {
   return (
     <section className="flex flex-1 flex-col items-center justify-center gap-4 bg-transparent p-8 text-slate-100">
-      <h1 className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-lg text-center text-4xl font-semibold tracking-tight text-pretty md:text-5xl">
+      <h1 className="motion-safe:motion-preset-slide-up-lg text-center text-4xl font-semibold tracking-tight text-pretty md:text-5xl">
         Otimize Sua Infraestrutura de TI e Reduza Custos
       </h1>
-      <p className="motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-lg motion-delay-700 text-center text-lg/8 text-pretty text-slate-300">
+      <p className="motion-delay-700 motion-safe:motion-preset-slide-up-lg text-center text-lg/8 text-pretty text-slate-300">
         Suporte de TI Estratégico para Aumentar a Produtividade e a Eficiência
         do Seu Negócio.
       </p>

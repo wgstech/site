@@ -1,9 +1,9 @@
-import { MotionInView } from "@/lib/components/motion-in-view";
+import { MotionInView } from "@/lib/components/animations/motion-in-view";
 import { cn } from "@/lib/utils/cn";
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import type { ComponentProps } from "react";
 
-interface BenefitCardProps extends ComponentProps<typeof MotionInView> {
+interface BenefitCardProps extends ComponentProps<"article"> {
   title: string;
   Icon: PhosphorIcon;
 }
@@ -16,13 +16,12 @@ export function BenefitCard({
 }: BenefitCardProps) {
   return (
     <MotionInView
+      as="article"
       className={cn(
-        "flex max-w-[60ch] flex-col items-center gap-3 p-8",
-        "text-center text-sm text-pretty text-slate-800 md:text-lg",
-        "motion-safe:motion-preset-fade-lg motion-safe:motion-slide-up-lg",
+        "motion-safe:motion-preset-slide-up",
+        "flex max-w-[60ch] flex-col items-center gap-3 p-8 text-center text-sm text-pretty text-slate-800 md:text-lg",
         className,
       )}
-      as="article"
     >
       <Icon
         weight="fill"

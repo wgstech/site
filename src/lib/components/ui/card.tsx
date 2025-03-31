@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils/cn";
 import Image, { type StaticImageData } from "next/image";
 import type { PropsWithChildren } from "react";
-import { MotionInView } from "../motion-in-view";
+import { MotionInView } from "../animations/motion-in-view";
 
 interface ServiceCardProps extends PropsWithChildren {
   img: StaticImageData;
@@ -18,7 +18,7 @@ export function ServiceCard({
   return (
     <MotionInView
       className={cn(
-        "group motion-safe:motion-preset-fade-lg motion-safe:motion-preset-slide-up-sm flex flex-col gap-3 overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow hover:shadow-2xl",
+        "group motion-safe:motion-preset-slide-left flex flex-col gap-3 overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow hover:shadow-2xl",
         className,
       )}
       as="article"

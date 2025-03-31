@@ -11,22 +11,17 @@ import {
   Title,
   Trigger,
 } from "@radix-ui/react-dialog";
-import {} from "@radix-ui/react-toast";
 import { type PropsWithChildren, useState } from "react";
 import { ContactForm } from "./contact-form";
-import { Toast } from "./ui/toast";
-
 interface ContactFormModalProps extends PropsWithChildren {
   details?: string;
 }
 
 export function ContactFormModal({ children, details }: ContactFormModalProps) {
   const [modalOpen, setModalOpen] = useState(false);
-  const [toastOpen, setToastOpen] = useState(false);
 
   const onSubmit = () => {
     setModalOpen(false);
-    setToastOpen(true);
   };
 
   return (
@@ -68,12 +63,6 @@ export function ContactFormModal({ children, details }: ContactFormModalProps) {
           </Content>
         </Overlay>
       </Portal>
-      <Toast
-        title="Obrigado!"
-        description="Sua mensagem foi enviada com sucesso. Entraremos em contato em breve."
-        open={toastOpen}
-        onOpenChange={setToastOpen}
-      />
     </Root>
   );
 }

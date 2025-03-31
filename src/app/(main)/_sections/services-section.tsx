@@ -4,22 +4,19 @@ import networkImg2 from "@/assets/images/cards/network-2.jpg";
 import technicianImg1 from "@/assets/images/cards/technician-1.jpg";
 import { ServiceCard } from "@/lib/components/ui/card";
 import { SectionContainer } from "@/lib/components/ui/section-container";
-import { SectionSubtitle } from "@/lib/components/ui/section-subtitle";
-import { SectionTitle } from "@/lib/components/ui/section-title";
+import { AnimatedSectionSubtitle } from "@/lib/components/ui/section-subtitle";
+import { AnimatedSectionTitle } from "@/lib/components/ui/section-title";
 
 export function ServicesSection() {
   return (
     <SectionContainer id="serviços">
-      <p className="text-center text-base/7 font-semibold text-slate-700">
-        Nossos Serviços
-      </p>
-      <SectionTitle className="text-center">
+      <AnimatedSectionTitle>
         Tudo Que Sua Empresa Precisa em TI
-      </SectionTitle>
-      <SectionSubtitle>
+      </AnimatedSectionTitle>
+      <AnimatedSectionSubtitle>
         Soluções completas para manter sua infraestrutura funcionando
         perfeitamente.
-      </SectionSubtitle>
+      </AnimatedSectionSubtitle>
       <div className="justify-content-between mt-20 grid grid-cols-1 place-content-center content-between justify-center gap-16 md:grid-cols-2 lg:grid-cols-4">
         <ServiceCard
           img={technicianImg1}
@@ -33,7 +30,7 @@ export function ServicesSection() {
         <ServiceCard
           img={networkImg2}
           title="Gestão de Rede"
-          className="motion-delay-600"
+          className="motion-delay-700"
         >
           Especialistas em redes para otimizar sua conexão. Configuração de
           roteadores, dimensionamento de Wi-Fi e gerenciamento completo da sua
@@ -42,7 +39,7 @@ export function ServicesSection() {
         <ServiceCard
           img={consultingImg}
           title="Consultoria Avançada em TI"
-          className="motion-delay-700"
+          className="motion-delay-900"
         >
           Consultoria de TI para resolver seus desafios e otimizar sua
           infraestrutura. Diagnósticos precisos, recomendações personalizadas e
@@ -51,7 +48,7 @@ export function ServicesSection() {
         <ServiceCard
           img={classImg}
           title="Treinamento em Segurança da Informação"
-          className="motion-delay-800"
+          className="motion-delay-1100"
         >
           Prepare seus funcionários para se defender contra phishing, ransomware
           e outras ameaças online! Reduza o risco de ataques e proteja os dados

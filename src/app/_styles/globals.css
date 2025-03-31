@@ -8,9 +8,8 @@
   --color-logo-blue: #00afef;
   --color-logo-orange: #f58634;
 
-  --font-fallback:
-    ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-fallback: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-furore: Furore, var(--font-fallback);
   --font-montserrat: Montserrat, var(--font-fallback);
 
