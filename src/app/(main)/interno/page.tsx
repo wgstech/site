@@ -2,7 +2,7 @@ import { ExternalLink } from "../../../lib/components/ui/external-link";
 
 export default function Toolbox() {
   return (
-    <main className="container mx-auto flex flex-1 grow grid-cols-3 bg-slate-50">
+    <main className="container flex flex-1 grow grid-cols-3 bg-slate-50">
       <ExternalLink href="https://nuvem.wgstech.com.br/index.php/login">
         Nuvem
       </ExternalLink>

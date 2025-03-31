@@ -1,7 +1,6 @@
 import { MotionInView } from "@/lib/components/animations/motion-in-view";
 import { ContactFormModal } from "@/lib/components/contact-form-modal";
 import { Button } from "@/lib/components/ui/button";
-import { SectionContainer } from "@/lib/components/ui/section-container";
 import { AnimatedSectionTitle } from "@/lib/components/ui/section-title";
 import {
   ArrowRight,
@@ -13,11 +12,14 @@ import { BenefitCard } from "./components/benefit-card";
 
 export function FeaturesAndBenefits() {
   return (
-    <SectionContainer id="beneficios">
+    <section
+      id="beneficios"
+      className="container flex min-h-[80vh] flex-col items-center justify-center gap-30"
+    >
       <AnimatedSectionTitle>
         Recursos e Benefícios que Impulsionam Seu Sucesso
       </AnimatedSectionTitle>
-      <div className="mt-14 grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-12">
+      <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-12">
         <BenefitCard
           title="Soluções Personalizadas"
           Icon={Gear}
@@ -45,12 +47,12 @@ export function FeaturesAndBenefits() {
       </div>
       <MotionInView className="motion-safe:motion-preset-fade-lg motion-delay-900">
         <ContactFormModal>
-          <Button size="lg" className="mx-auto mt-14" type="button">
+          <Button size="lg" className="mx-auto" type="button">
             Estou interessado
             <ArrowRight weight="bold" />
           </Button>
         </ContactFormModal>
       </MotionInView>
-    </SectionContainer>
+    </section>
   );
 }

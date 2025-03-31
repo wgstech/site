@@ -1,5 +1,4 @@
 import { Navbar } from "@/app/(main)/_layout/navbar";
-import { CountUp } from "@/lib/components/animations/count-up";
 import { VideoBackground } from "./_sections/components/video-background";
 import { ContactSection } from "./_sections/contact-section";
 import { FeaturesAndBenefits } from "./_sections/features-and-benefits-section";
@@ -14,9 +13,6 @@ export default function Home() {
       <div className="flex h-screen w-full flex-col">
         <VideoBackground />
         <Navbar />
-        <div className="text-white">
-          <CountUp to={70} />
-        </div>
         <Hero />
       </div>
       <FeaturesAndBenefits />

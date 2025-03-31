@@ -3,13 +3,12 @@ import consultingImg from "@/assets/images/cards/consulting.jpg";
 import networkImg2 from "@/assets/images/cards/network-2.jpg";
 import technicianImg1 from "@/assets/images/cards/technician-1.jpg";
 import { ServiceCard } from "@/lib/components/ui/card";
-import { SectionContainer } from "@/lib/components/ui/section-container";
 import { AnimatedSectionSubtitle } from "@/lib/components/ui/section-subtitle";
 import { AnimatedSectionTitle } from "@/lib/components/ui/section-title";
 
 export function ServicesSection() {
   return (
-    <SectionContainer id="serviços">
+    <section id="serviços" className="container">
       <AnimatedSectionTitle>
         Tudo Que Sua Empresa Precisa em TI
       </AnimatedSectionTitle>
@@ -55,6 +54,6 @@ export function ServicesSection() {
           da sua empresa com um treinamento rápido e eficaz.
         </ServiceCard>
       </div>
-    </SectionContainer>
+    </section>
   );
 }
