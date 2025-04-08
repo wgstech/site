@@ -1,0 +1,36 @@
+import { cn } from "@/lib/helpers/cn";
+import { cva, type VariantProps} from 'class-variance-authority'
+import type { ComponentProps } from "react";
+
+const buttonVariants = cva('flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none', {
+  variants: {
+    size: {
+      md: 'px-3 py-2',
+      lg: 'px-4 py-4 text-lg',
+      xl: 'px-5 py-4 text-lg'
+    },
+    intent: {
+      normal: 'bg-gradient-to-r from-sky-500 to-cyan-700 text-white transition-colors transition-discrete hover:brightness-125 disabled:from-slate-600 disabled:to-slate-600 disabled:text-slate-100',
+      outline: 'border border-sky-600 bg-transparent text-sky-600 hover:border-sky-700 hover:bg-sky-700 hover:text-white'
+    }
+  },
+  defaultVariants: {
+    size: 'md',
+    intent: 'normal'
+  }
+})
+
+export function Button({
+  className,
+  intent,
+  size,
+  ...rest
+}: ComponentProps<"button"> & VariantProps<typeof buttonVariants>) {
+  return (
+    <button
+      type="button"
+      className={cn(buttonVariants({ intent, size, className }))}
+      {...rest}
+    />
+  );
+}

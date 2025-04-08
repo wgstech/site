@@ -1,10 +1,9 @@
 import notFoundImg from "@/assets/images/404.jpg";
-import { Logo } from "@/lib/components/logos/logo.svg";
-import { ExternalLink } from "@/lib/components/ui/external-link";
+import { Logo } from "@/components/atoms/logos/logo.svg";
+import { ExternalLink } from "@/components/atoms/external-link";
 import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
-import "./_styles/globals.css";
 
 export default function NotFound() {
   return (

@@ -1,11 +1,11 @@
-import { Navbar } from "@/app/(main)/_layout/navbar";
-import { VideoBackground } from "./_sections/components/video-background";
-import { ContactSection } from "./_sections/contact-section";
-import { FeaturesAndBenefits } from "./_sections/features-and-benefits-section";
-import { Hero } from "./_sections/hero";
-import { PricingSection } from "./_sections/pricing-section";
-import { ServicesSection } from "./_sections/services-section";
-import { SocialProofSection } from "./_sections/social-proof-section";
+import { Navbar } from "@/components/templates/layout/navbar";
+import { VideoBackground } from "@/components/organisms/video-background";
+import { ContactSection } from "@/components/templates/sections/contact-section";
+import { FeaturesAndBenefits } from "@/components/templates/sections/features-and-benefits-section";
+import { HeroSection } from "@/components/templates/sections/hero-section";
+import { PricingSection } from "@/components/templates/sections/pricing-section";
+import { ServicesSection } from "@/components/templates/sections/services-section";
+import { SocialProofSection } from "@/components/templates/sections/social-proof-section";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <div className="flex h-screen w-full flex-col">
         <VideoBackground />
         <Navbar />
-        <Hero />
+        <HeroSection />
       </div>
       <FeaturesAndBenefits />
       <SocialProofSection />
