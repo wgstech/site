@@ -1,4 +1,4 @@
-import { ExternalLink } from "../../../lib/components/ui/external-link";
+import { ExternalLink } from "@/components/atoms/external-link";
 
 export default function Toolbox() {
   return (
