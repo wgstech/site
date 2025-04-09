@@ -25,7 +25,7 @@ export function BenefitCard({
 		>
 			<Icon
 				weight="fill"
-				className="size-12 text-orange-500 md:size-16 lg:size-18"
+				className="size-12 text-orange-400 md:size-16 lg:size-18"
 			/>
 			<h3 className="font-semibold text-2xl text-blue-700 lg:text-3xl">
 				{title}

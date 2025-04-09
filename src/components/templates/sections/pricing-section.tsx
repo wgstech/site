@@ -115,7 +115,7 @@ function PricingCard({
 					type="button"
 					className={cn(
 						"mt-10 block w-full rounded-xl bg-linear-to-r/oklch from-blue-500 to-blue-700 px-3 py-2 text-center font-semibold text-sm/6 text-white shadow-xs transition-all hover:brightness-125",
-						custom && "from-blue-500 via-purple-500 to-orange-500",
+						custom && "from-blue-500 via-purple-500 to-orange-400",
 					)}
 				>
 					{custom ? "Entrar em contato" : "Comprar plano"}

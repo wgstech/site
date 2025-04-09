@@ -35,7 +35,7 @@ export function LabeledInput<T extends "input" | "textarea">({
 			<div className="relative clear-both mt-1 flex flex-col items-center">
 				{Icon != null && (
 					<Icon
-						className="-translate-y-1/2 absolute top-1/2 left-2 size-6 text-slate-400 transition-colors group-focus-within:text-orange-500"
+						className="-translate-y-1/2 absolute top-1/2 left-2 size-6 text-slate-400 transition-colors group-focus-within:text-orange-400"
 						weight={iconFill}
 					/>
 				)}
