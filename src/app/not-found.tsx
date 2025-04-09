@@ -15,7 +15,7 @@ export default function NotFound() {
 				</Link>
 			</header>
 			<main className="mx-auto w-full max-w-7xl flex-1 px-6 py-24 lg:px-8">
-				<p className="max-w-6xl font-semibold text-sky-800 leading-8">404</p>
+				<p className="max-w-6xl font-semibold text-blue-800 leading-8">404</p>
 				<h1 className="mt-4 text-pretty font-semibold text-5xl tracking-tight md:text-6xl">
 					Página não encontrada
 				</h1>
@@ -24,7 +24,7 @@ export default function NotFound() {
 				</p>
 				<Link
 					href="/"
-					className="mt-10 flex items-center gap-1 rounded-xl font-semibold text-sky-700 text-sm/7"
+					className="mt-10 flex items-center gap-1 rounded-xl font-semibold text-blue-700 text-sm/7"
 				>
 					<ArrowLeft className="inline" weight="bold" /> Voltar ao início
 				</Link>

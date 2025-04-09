@@ -23,7 +23,7 @@ export function Footer() {
 					</p>
 				</div>
 				<div className="group">
-					<h4 className="mb-2 py-2 font-semibold text-xl tracking-wide transition-colors group-hover:text-sky-300 lg:text-2xl">
+					<h4 className="mb-2 py-2 font-semibold text-xl tracking-wide transition-colors group-hover:text-blue-300 lg:text-2xl">
 						Contatos
 					</h4>
 					<ul className="flex flex-col gap-2">

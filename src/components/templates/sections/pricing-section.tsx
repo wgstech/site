@@ -26,7 +26,7 @@ export function PricingSection() {
 						<PricingItem>Gerenciamento completo da sua rede</PricingItem>
 						<PricingItem>
 							Monitoramento, Manutenção e Patching de até{" "}
-							<strong className="text-sky-800">2</strong> máquinas
+							<strong className="text-blue-800">2</strong> máquinas
 						</PricingItem>
 						<PricingItem variant="plus">
 							Máquinas adicionais por <strong>R$ 60/mês</strong> cada.
@@ -41,7 +41,7 @@ export function PricingSection() {
 						<PricingItem>Gerenciamento completo da sua rede</PricingItem>
 						<PricingItem>
 							Monitoramento, Manutenção e Patching de até{" "}
-							<strong className="text-sky-800">8</strong> máquinas
+							<strong className="text-blue-800">8</strong> máquinas
 						</PricingItem>
 						<PricingItem>
 							Relatórios mensais de desempenho e manutenção
@@ -114,7 +114,7 @@ function PricingCard({
 				<button
 					type="button"
 					className={cn(
-						"mt-10 block w-full rounded-xl bg-linear-to-r/oklch from-blue-500 to-sky-700 px-3 py-2 text-center font-semibold text-sm/6 text-white shadow-xs transition-all hover:brightness-125",
+						"mt-10 block w-full rounded-xl bg-linear-to-r/oklch from-blue-500 to-blue-700 px-3 py-2 text-center font-semibold text-sm/6 text-white shadow-xs transition-all hover:brightness-125",
 						custom && "from-blue-500 via-purple-500 to-orange-500",
 					)}
 				>

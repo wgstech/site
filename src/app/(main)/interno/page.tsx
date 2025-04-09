@@ -20,42 +20,42 @@ export default function Toolbox() {
 				Reset EPSON
 			</ExternalLink>
 			{/* <ul className="group flex flex-col gap-2">
-          <h3 className="py-2 text-xl font-bold tracking-wider transition-colors group-hover:text-sky-300">
+          <h3 className="py-2 text-xl font-bold tracking-wider transition-colors group-hover:text-blue-300">
             Menu
           </h3>
           <ExternalLink
             href="https://nuvem.wgstech.com.br/index.php/login"
-            className="transition-colors hover:text-sky-300"
+            className="transition-colors hover:text-blue-300"
           >
             Nuvem
           </ExternalLink>
           <ExternalLink
             href="https://www.hdtune.com/files/hdtune_255.exe"
-            className="transition-colors hover:text-sky-300"
+            className="transition-colors hover:text-blue-300"
           >
             HD Tune
           </ExternalLink>
           <ExternalLink
             href="https://nuvem.wgstech.com.br/index.php/s/Xp7kLMfRR8cpJZT"
-            className="transition-colors hover:text-sky-300"
+            className="transition-colors hover:text-blue-300"
           >
             GLPI Padronização
           </ExternalLink>
           <ExternalLink
             href="https://rmm.wgstech.com.br/"
-            className="transition-colors hover:text-sky-300"
+            className="transition-colors hover:text-blue-300"
           >
             RMM
           </ExternalLink>
           <ExternalLink
             href="https://nuvem.wgstech.com.br/index.php/s/3H8STsrQ6HZtM3A"
-            className="transition-colors hover:text-sky-300"
+            className="transition-colors hover:text-blue-300"
           >
             Setup APAC 1.2.5
           </ExternalLink>
           <ExternalLink
             href="https://nuvem.wgstech.com.br/index.php/s/bYCrZr2CzCpsGsw"
-            className="transition-colors hover:text-sky-300"
+            className="transition-colors hover:text-blue-300"
           >
             Reset EPSON
           </ExternalLink>

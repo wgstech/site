@@ -1,6 +1,6 @@
-import { cn } from "@/lib/helpers/cn";
 import { cva, type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
+import { cn } from "@/lib/helpers/cn";
 
 const buttonVariants = cva(
 	"flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",
@@ -13,9 +13,9 @@ const buttonVariants = cva(
 			},
 			intent: {
 				normal:
-					"bg-gradient-to-r from-sky-500 to-cyan-700 text-white transition-colors transition-discrete hover:brightness-125 disabled:from-slate-600 disabled:to-slate-600 disabled:text-slate-100",
+					"bg-gradient-to-r from-blue-500 to-cyan-700 text-white transition-colors transition-discrete hover:brightness-125 disabled:from-slate-600 disabled:to-slate-600 disabled:text-slate-100",
 				outline:
-					"border border-sky-600 bg-transparent text-sky-600 hover:border-sky-700 hover:bg-sky-700 hover:text-white",
+					"border border-blue-600 bg-transparent text-blue-600 hover:border-blue-700 hover:bg-blue-700 hover:text-white",
 			},
 		},
 		defaultVariants: {
