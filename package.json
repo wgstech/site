@@ -34,6 +34,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.0.0-beta.1",
     "@tailwindcss/postcss": "^4.0.17",
     "@types/node": "^22.13.13",
     "@types/react": "^19.0.12",
@@ -41,10 +42,6 @@
     "@types/uuid": "^10.0.0",
     "@types/validator": "^13.12.3",
     "postcss": "^8.5.3",
-    "prettier": "^3.4.2",
-    "prettier-plugin-organize-imports": "^4.1.0",
-    "prettier-plugin-packagejson": "^2.5.10",
-    "prettier-plugin-tailwindcss": "^0.6.11",
     "tailwindcss": "^4.0.7",
     "tailwindcss-motion": "^1.1.0",
     "typescript": "^5.8.2"
