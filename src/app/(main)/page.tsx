@@ -8,18 +8,18 @@ import { ServicesSection } from "@/components/templates/sections/services-sectio
 import { SocialProofSection } from "@/components/templates/sections/social-proof-section";
 
 export default function Home() {
-  return (
-    <main className="mx-auto">
-      <div className="flex h-screen w-full flex-col">
-        <VideoBackground />
-        <Navbar />
-        <HeroSection />
-      </div>
-      <FeaturesAndBenefits />
-      <SocialProofSection />
-      <ServicesSection />
-      <PricingSection />
-      <ContactSection />
-    </main>
-  );
+	return (
+		<main className="mx-auto">
+			<div className="flex h-screen w-full flex-col">
+				<VideoBackground />
+				<Navbar />
+				<HeroSection />
+			</div>
+			<FeaturesAndBenefits />
+			<SocialProofSection />
+			<ServicesSection />
+			<PricingSection />
+			<ContactSection />
+		</main>
+	);
 }

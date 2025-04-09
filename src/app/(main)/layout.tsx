@@ -3,15 +3,15 @@ import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
 
 export default function Layout({
-  children,
+	children,
 }: Readonly<{
-  children: ReactNode;
+	children: ReactNode;
 }>) {
-  return (
-    <>
-      <Toaster />
-      {children}
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Toaster />
+			{children}
+			<Footer />
+		</>
+	);
 }

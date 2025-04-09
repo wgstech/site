@@ -2,47 +2,68 @@
 @plugin "tailwindcss-motion";
 
 @theme inline {
-  --color-logo-blue: #00afef;
-  --color-logo-orange: #f58634;
+	--font-furore: Furore, var(--font-serif);
+	--font-montserrat: Montserrat, var(--font-sans);
 
-  --font-furore: Furore, var(--font-serif);
-  --font-montserrat: Montserrat, var(--font-sans);
+	--default-transition-duration: 500ms;
 
-  --default-transition-duration: 500ms;
+	--color-blue-50: #d5f2fc;
+	--color-blue-100: #aae4fa;
+	--color-blue-200: #80d7f7;
+	--color-blue-300: #55caf4;
+	--color-blue-400: #2bbcf2;
+	--color-blue-500: #00afef;
+	--color-blue-600: #0092c7;
+	--color-blue-700: #00759f;
+	--color-blue-800: #005878;
+	--color-blue-900: #003a50;
+	--color-blue-950: #001d28;
+
+	--color-orange-50: #fdebdd;
+	--color-orange-100: #fcd7bb;
+	--color-orange-200: #fac39a;
+	--color-orange-300: #f8ae78;
+	--color-orange-400: #f79a56;
+	--color-orange-500: #f58634;
+	--color-orange-600: #cc702b;
+	--color-orange-700: #a35923;
+	--color-orange-800: #7b431a;
+	--color-orange-900: #522d11;
+	--color-orange-950: #291609;
 }
 
 @layer base {
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
+	button:not(:disabled),
+	[role="button"]:not(:disabled) {
+		cursor: pointer;
+	}
 
-  dialog {
-    margin: auto;
-  }
+	dialog {
+		margin: auto;
+	}
 
-  input::placeholder,
-  textarea::placeholder {
-    color: var(--color-slate-400);
-  }
+	input::placeholder,
+	textarea::placeholder {
+		color: var(--color-slate-400);
+	}
 
-  strong,
-  b {
-    font-weight: 700;
-  }
+	strong,
+	b {
+		font-weight: 700;
+	}
 }
 
 @layer theme {
-  :focus {
-    @apply outline-none;
-  }
+	:focus {
+		@apply outline-none;
+	}
 
-  :focus-visible {
-    @apply outline-logo-orange outline-2 outline-solid;
-  }
+	:focus-visible {
+		@apply outline-orange-500 outline-2 outline-solid;
+	}
 }
 
 @utility container {
-  margin-inline: auto;
-  padding-inline: 2rem;
+	margin-inline: auto;
+	padding-inline: 2rem;
 }
