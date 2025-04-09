@@ -1,8 +1,28 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
+import { Montserrat } from "next/font/google";
+import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import "@/styles/globals.css";
+
+const furore = localFont({
+	src: "../../public/fonts/Furore.woff2",
+	display: "swap",
+	preload: true,
+	variable: "--font-furore",
+	weight: "'normal'",
+	style: "normal",
+});
+
+const montserrat = Montserrat({
+	display: "swap",
+	subsets: ["latin", "latin-ext"],
+	variable: "--font-montserrat",
+	weight: "variable",
+	preload: true,
+	style: "normal",
+});
 
 export const metadata = {
 	title: "WGS Tech",
@@ -41,7 +61,7 @@ export const metadata = {
 
 export const viewport = {
 	colorScheme: "light",
-	themeColor: "#0D0A0E",
+	themeColor: "#f8fafc",
 } satisfies Viewport;
 
 export default function RootLayout({
@@ -50,15 +70,13 @@ export default function RootLayout({
 	children: ReactNode;
 }>) {
 	return (
-		<html lang="pt-BR">
-			<head>
-				<link
-					rel="preconnect"
-					href="https://fonts.gstatic.com"
-					crossOrigin="anonymous"
-				/>
-			</head>
-			<body className="min-h-screen scroll-smooth bg-slate-50 text-slate-900 antialiased">
+		<html
+			lang="pt-BR"
+			className="w-full overflow-x-hidden scroll-smooth bg-slate-50"
+		>
+			<body
+				className={`min-h-screen w-full text-slate-900 antialiased ${montserrat.variable} ${furore.variable} font-montserrat`}
+			>
 				<noscript>Seu navegador não suporta JavaScript.</noscript>
 				{children}
 				<Analytics />
