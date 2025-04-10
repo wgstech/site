@@ -1,6 +1,7 @@
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { MotionInView } from "@/components/atoms/animations/motion-in-view";
 import { Button } from "@/components/atoms/button";
+import { Section } from "@/components/atoms/section";
 import { SectionTitle } from "@/components/molecules/section-title";
 import { ContactFormModal } from "@/components/organisms/contact-form-modal";
 import { benefits } from "@/lib/constants/benefits";
@@ -8,9 +9,9 @@ import { BenefitCard } from "../../organisms/benefit-card";
 
 export function FeaturesAndBenefits() {
 	return (
-		<section
+		<Section
 			id="beneficios"
-			className="container flex flex-col items-center justify-center gap-30 py-30"
+			className="flex flex-col items-center justify-center gap-30"
 		>
 			<SectionTitle>
 				Recursos e Benefícios que Impulsionam Seu Sucesso
@@ -30,6 +31,6 @@ export function FeaturesAndBenefits() {
 					</Button>
 				</ContactFormModal>
 			</MotionInView>
-		</section>
+		</Section>
 	);
 }

@@ -1,7 +1,7 @@
 import type { Icon as PhosphorIcon } from "@phosphor-icons/react";
 import type { ComponentProps } from "react";
+import { twMerge } from "tailwind-merge";
 import { MotionInView } from "@/components/atoms/animations/motion-in-view";
-import { cn } from "@/lib/helpers/cn";
 
 interface BenefitCardProps extends ComponentProps<"article"> {
 	title: string;
@@ -17,7 +17,7 @@ export function BenefitCard({
 	return (
 		<MotionInView
 			as="article"
-			className={cn(
+			className={twMerge(
 				"motion-safe:motion-preset-slide-up",
 				"flex max-w-[60ch] flex-col items-center gap-3 text-pretty p-8 text-center text-slate-800 text-sm md:text-lg",
 				className,

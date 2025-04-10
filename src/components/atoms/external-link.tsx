@@ -1,5 +1,5 @@
 import type { ComponentProps } from "react";
-import { cn } from "@/lib/helpers/cn";
+import { twMerge } from "tailwind-merge";
 
 export function ExternalLink({
 	className,
@@ -8,7 +8,7 @@ export function ExternalLink({
 	return (
 		<a
 			{...props}
-			className={cn(
+			className={twMerge(
 				"flex items-center gap-2 rounded-xl text-sm transition-colors hover:text-blue-300",
 				className,
 			)}

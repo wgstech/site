@@ -1,14 +1,12 @@
+import { Section } from "@/components/atoms/section";
 import { SectionSubtitle } from "@/components/molecules/section-subtitle";
 import { SectionTitle } from "@/components/molecules/section-title";
 import { ContactForm } from "@/components/organisms/contact-form";
 
 export function ContactSection() {
 	return (
-		<section
-			id="contato"
-			className="bg-gradient-to-br from-blue-500 to-cyan-700 py-30"
-		>
-			<div className="container rounded-2xl bg-slate-50 p-10 shadow-md transition-shadow focus-within:shadow-2xl hover:shadow-2xl">
+		<Section id="contato" color="blue">
+			<div className="rounded-2xl bg-slate-50 p-10 shadow-md transition-shadow focus-within:shadow-2xl hover:shadow-2xl">
 				<SectionTitle>Entraremos em contato com você</SectionTitle>
 				<SectionSubtitle className="text-slate-500">
 					Não compartilharemos seus dados com ninguém.
@@ -16,6 +14,6 @@ export function ContactSection() {
 
 				<ContactForm />
 			</div>
-		</section>
+		</Section>
 	);
 }

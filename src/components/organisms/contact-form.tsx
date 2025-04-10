@@ -67,8 +67,8 @@ export function ContactForm({ onSubmit, details }: ContactFormProps) {
 				Icon={User}
 				type="input"
 				placeholder="Gabriel Santos"
-				register={register("name")}
 				error={errors.name}
+				{...register("name")}
 			/>
 			<LabeledInput
 				label="Telefone"
@@ -77,14 +77,14 @@ export function ContactForm({ onSubmit, details }: ContactFormProps) {
 				iconFill="light"
 				placeholder="Seu WhatsApp ou telefone"
 				error={errors.phone}
-				register={register("phone")}
+				{...register("phone")}
 			/>
 			<LabeledInput
 				label="Como podemos te ajudar?"
 				type="textarea"
 				placeholder="Conte-nos um pouco sobre como podemos contribuir para a sua instituição"
 				error={errors.details}
-				register={register("details")}
+				{...register("details")}
 			/>
 			<div className="flex justify-end">
 				<Button type="submit" disabled={isSubmitting}>

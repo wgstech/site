@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/templates/layout/navbar";
 import { VideoBackground } from "@/components/organisms/video-background";
+import { Navbar } from "@/components/templates/layout/navbar";
 import { ContactSection } from "@/components/templates/sections/contact-section";
 import { FeaturesAndBenefits } from "@/components/templates/sections/features-and-benefits-section";
 import { HeroSection } from "@/components/templates/sections/hero-section";
@@ -9,7 +9,7 @@ import { SocialProofSection } from "@/components/templates/sections/social-proof
 
 export default function Home() {
 	return (
-		<main className="mx-auto">
+		<main>
 			<div className="flex h-screen w-full flex-col">
 				<VideoBackground />
 				<Navbar />

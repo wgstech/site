@@ -1,8 +1,8 @@
 "use client";
 
-import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
-import { cn } from "@/lib/helpers/cn";
 import type { ComponentProps, ElementType } from "react";
+import { twMerge } from "tailwind-merge";
+import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
 
 type MotionInViewProps<T extends ElementType> = ComponentProps<T> & {
 	threshold?: number;
@@ -20,7 +20,7 @@ export function MotionInView<T extends ElementType = "div">({
 	return (
 		<Component
 			ref={ref}
-			className={cn(
+			className={twMerge(
 				className,
 				didIntersect
 					? "motion-safe:motion-running"

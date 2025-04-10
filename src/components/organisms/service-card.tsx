@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from "next/image";
 import type { PropsWithChildren } from "react";
-import { cn } from "@/lib/helpers/cn";
+import { twMerge } from "tailwind-merge";
 import { MotionInView } from "../atoms/animations/motion-in-view";
 
 interface ServiceCardProps extends PropsWithChildren {
@@ -17,7 +17,7 @@ export function ServiceCard({
 }: ServiceCardProps) {
 	return (
 		<MotionInView
-			className={cn(
+			className={twMerge(
 				"group motion-safe:motion-preset-slide-left flex flex-col gap-3 overflow-hidden rounded-2xl bg-white shadow-lg transition-shadow hover:shadow-2xl",
 				className,
 			)}
