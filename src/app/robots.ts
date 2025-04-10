@@ -5,7 +5,7 @@ export default function robots() {
 		rules: {
 			userAgent: "*",
 			allow: "/",
-			disallow: "/interno/",
+			disallow: "/toolbox/",
 		},
 		sitemap: "https://wgstech.com.br/sitemap.xml",
 	} satisfies MetadataRoute.Robots;

@@ -75,7 +75,7 @@ export default function RootLayout({
 			className="w-full overflow-x-hidden scroll-smooth bg-slate-50"
 		>
 			<body
-				className={`min-h-screen w-full text-slate-900 antialiased ${montserrat.variable} ${furore.variable} font-montserrat`}
+				className={`flex min-h-screen w-full flex-col text-slate-900 antialiased ${montserrat.variable} ${furore.variable} font-montserrat`}
 			>
 				<noscript>Seu navegador não suporta JavaScript.</noscript>
 				{children}

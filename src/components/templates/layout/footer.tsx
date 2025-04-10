@@ -10,7 +10,7 @@ import { LogoWithText } from "@/components/atoms/logos/logo-with-text";
 
 export function Footer() {
 	return (
-		<footer className="w-full bg-slate-800 text-slate-50">
+		<footer className="mt-auto w-full bg-slate-800 text-slate-50">
 			<div className="mx-auto flex justify-center py-10 sm:justify-evenly">
 				<div className="hidden flex-col self-center sm:flex">
 					<LogoWithText
