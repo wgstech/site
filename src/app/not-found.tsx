@@ -1,7 +1,7 @@
 import { ArrowLeft } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Link from "next/link";
-import notFoundImg from "@/assets/images/404.jpg";
+import notFoundImg from "@/assets/images/404.webp";
 import { ExternalLink } from "@/components/atoms/external-link";
 import { Logo } from "@/components/atoms/logos/logo.svg";
 

@@ -1,9 +1,9 @@
-import type { StaticImageData } from "next/image";
-import classImg from "@/assets/images/cards/class.jpg";
-import consultingImg from "@/assets/images/cards/consulting.jpg";
-import networkImg from "@/assets/images/cards/network-2.jpg";
-import technicianImg from "@/assets/images/cards/technician-1.jpg";
 import dedent from "dedent";
+import type { StaticImageData } from "next/image";
+import classImg from "@/assets/images/cards/class.webp";
+import consultingImg from "@/assets/images/cards/consulting.webp";
+import networkImg from "@/assets/images/cards/network-2.webp";
+import technicianImg from "@/assets/images/cards/technician-1.webp";
 
 interface Service {
 	img: StaticImageData;
