@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type RefObject } from "react";
+import { type RefObject, useEffect, useRef, useState } from "react";
 import { useIntersection } from "react-use";
 
 export function useIntersectionOnce<T extends HTMLElement>(
@@ -7,7 +7,7 @@ export function useIntersectionOnce<T extends HTMLElement>(
 	const ref = useRef<T>(null);
 	const [didIntersect, setDidIntersect] = useState(false);
 	const entry = useIntersection(ref as RefObject<T>, {
-		rootMargin: "-20% 0px",
+		rootMargin: "-10% 0px",
 		...options,
 	});
 
