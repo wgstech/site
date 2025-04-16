@@ -7,15 +7,23 @@ export interface PriceItem {
 
 export interface Price {
 	title: string;
-	price: "custom" | number;
+	basePrice: number;
 	description: string;
 	items: PriceItem[];
+	additionalMachinePrice: number;
+	recommendedUpTo: number;
+	recommendedFrom: number;
+	freeMachines: number;
 }
 
 export const prices = [
 	{
 		title: "Básico",
-		price: 200,
+		basePrice: 200,
+		freeMachines: 2,
+		recommendedFrom: 0,
+		recommendedUpTo: 4,
+		additionalMachinePrice: 80,
 		description: "O essencial para você começar.",
 		items: [
 			{ description: "Suporte remoto e no local" },
@@ -28,20 +36,41 @@ export const prices = [
 					</>
 				),
 			},
-			{
-				type: "plus",
-				description: (
-					<>
-						Máquinas adicionais por <strong>R$ 60/mês</strong> cada.
-					</>
-				),
-			},
 		],
 	},
 	{
 		title: "Premium",
-		price: 600,
+		description: "Cobertura simples.",
+		basePrice: 400,
+		freeMachines: 4,
+		additionalMachinePrice: 80,
+		recommendedFrom: 2,
+		recommendedUpTo: 7,
+		items: [
+			{ description: "Suporte remoto e no local" },
+			{ description: "Gerenciamento completo da sua rede" },
+			{
+				description: (
+					<>
+						Monitoramento, Manutenção e Patching de até{" "}
+						<strong className="text-blue-800">4</strong> máquinas
+					</>
+				),
+			},
+			{ description: "Relatórios mensais de desempenho e manutenção" },
+			{
+				description: "Consultoria básica em TI",
+			},
+		],
+	},
+	{
+		title: "Elite",
 		description: "Cobertura completa e sem limites.",
+		basePrice: 600,
+		freeMachines: 8,
+		additionalMachinePrice: 80,
+		recommendedFrom: 6,
+		recommendedUpTo: 30,
 		items: [
 			{ description: "Suporte remoto e no local" },
 			{ description: "Gerenciamento completo da sua rede" },
@@ -59,26 +88,26 @@ export const prices = [
 			},
 			{ description: "Gerenciamento completo de Backups" },
 			{ description: "Treinamento de conscientização sobre segurança" },
-			{
-				type: "plus",
-				description: (
-					<>
-						Máquinas adicionais por <strong>R$ 80/mês</strong> cada.
-					</>
-				),
-			},
 		],
 	},
 	{
-		title: "Enterprise",
-		price: "custom",
-		description: "Preço que escala com você",
+		title: "Elite",
+		basePrice: 800,
+		description: "Completaço",
+		freeMachines: 10,
+		additionalMachinePrice: 80,
+		recommendedFrom: 10,
+		recommendedUpTo: Number.POSITIVE_INFINITY,
 		items: [
 			{ description: "Suporte remoto e no local" },
 			{ description: "Gerenciamento completo da sua rede" },
 			{
-				description:
-					"Monitoramento, Manutenção e Patching de máquinas ilimitado",
+				description: (
+					<>
+						Monitoramento, Manutenção e Patching de até{" "}
+						<strong className="text-blue-800">10</strong> máquinas
+					</>
+				),
 			},
 			{ description: "Relatórios mensais de desempenho e manutenção" },
 			{

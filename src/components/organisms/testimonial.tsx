@@ -34,7 +34,7 @@ export function Testimonial() {
 							className="motion-safe:motion-preset-fade motion-delay-400 mt-8 text-base"
 						>
 							<div className="font-semibold text-white">Judith Black</div>
-							<div className="mt-1 text-slate-200">CEO of Workcation</div>
+							<div className="my-1 text-slate-200">CEO of Workcation</div>
 						</MotionInView>
 					</figure>
 				</div>

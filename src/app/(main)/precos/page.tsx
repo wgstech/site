@@ -8,7 +8,7 @@ export const dynamic = "force-static";
 export default function PricingPage() {
 	return (
 		<main>
-			<div className="flex h-screen w-full flex-col">
+			<div className="flex min-h-screen w-full flex-col">
 				<Navbar className="bg-slate-800 text-white" />
 				<SectionTitle className="mt-30">
 					Preços Transparentes para Sua Tranquilidade
