@@ -61,7 +61,7 @@ export function ContactForm({ onSubmit, details }: ContactFormProps) {
 	);
 
 	return (
-		<form onSubmit={handleFormSubmit} className="flex flex-col gap-5">
+		<form onSubmit={handleFormSubmit} className="flex max-w-2xl flex-col gap-5">
 			<LabeledInput
 				label="Seu nome"
 				Icon={User}

@@ -1,15 +1,18 @@
-import Image, { type StaticImageData } from "next/image";
+import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import Image from "next/image";
+import type { StaticImageData } from "next/image";
+import Link from "next/link";
 import type { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
 import { MotionInView } from "@/components/atoms/animations/motion-in-view";
-import { Section } from "@/components/atoms/section";
+import { Button } from "@/components/atoms/button";
 import { SectionSubtitle } from "@/components/molecules/section-subtitle";
 import { SectionTitle } from "@/components/molecules/section-title";
 import { services } from "@/lib/constants/services";
 
-export function ServicesSection() {
+export function ForCompanies() {
 	return (
-		<Section id="serviços">
+		<div className="*:container">
 			<SectionTitle>Tudo Que Sua Empresa Precisa em TI</SectionTitle>
 			<SectionSubtitle>
 				Soluções completas para manter sua infraestrutura funcionando
@@ -20,7 +23,14 @@ export function ServicesSection() {
 					<ServiceCard key={service.title} {...service} />
 				))}
 			</div>
-		</Section>
+			<div className="mt-12 flex justify-center">
+				<Link href="/precos">
+					<Button size="md">
+						Ver nossos planos <ArrowRight weight="bold" />
+					</Button>
+				</Link>
+			</div>
+		</div>
 	);
 }
 

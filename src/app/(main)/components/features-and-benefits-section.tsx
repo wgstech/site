@@ -13,7 +13,7 @@ export function FeaturesAndBenefits() {
 	return (
 		<Section
 			id="beneficios"
-			className="flex flex-col items-center justify-center gap-30"
+			className="flex flex-col items-center justify-center gap-20"
 		>
 			<SectionTitle>
 				Recursos e Benefícios que Impulsionam Seu Sucesso

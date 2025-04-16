@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Viewport } from "next";
 import type { Metadata } from "next";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { ReactNode } from "react";
 import { furore, montserrat } from "@/lib/constants/fonts";
 import "@/styles/globals.css";
@@ -60,7 +61,7 @@ export default function RootLayout({
 				className={`flex min-h-screen w-full flex-col text-slate-900 antialiased ${montserrat.variable} ${furore.variable} font-montserrat`}
 			>
 				<noscript>Seu navegador não suporta JavaScript.</noscript>
-				{children}
+				<NuqsAdapter>{children}</NuqsAdapter>
 				<Analytics />
 				<SpeedInsights />
 			</body>

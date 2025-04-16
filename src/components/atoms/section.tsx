@@ -2,7 +2,7 @@ import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const sectionVariants = tv({
-	base: "py-30 *:container",
+	base: "my-32 md:my-56",
 	variants: {
 		color: {
 			white: "bg-white",
@@ -10,9 +10,14 @@ const sectionVariants = tv({
 			blue: "bg-gradient-to-br from-blue-500 to-cyan-700",
 			dark: "bg-blue-800",
 		},
+		container: {
+			true: "*:container",
+			false: null,
+		},
 	},
 	defaultVariants: {
 		color: "slate",
+		container: true,
 	},
 });
 
@@ -23,11 +28,15 @@ interface SectionProps extends ComponentProps<"section"> {
 export function Section({
 	children,
 	className,
+	container,
 	color,
 	...rest
 }: SectionProps & VariantProps<typeof sectionVariants>) {
 	return (
-		<section {...rest} className={sectionVariants({ color, className })}>
+		<section
+			{...rest}
+			className={sectionVariants({ color, container, className })}
+		>
 			{children}
 		</section>
 	);

@@ -3,49 +3,43 @@ import { Section } from "../atoms/section";
 
 export function Testimonial() {
 	return (
-		<div className="pt-24 pb-16 sm:pt-32 sm:pb-24 xl:pb-32">
-			<Section
-				color="blue"
-				id="depoimento"
-				className=" py-0 pb-20 text-white sm:pb-24 xl:pb-0"
-			>
-				<div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
-					<MotionInView className="-mt-8 xl:-mb-8 w-full max-w-2xl xl:w-96 xl:flex-none motion-safe:motion-preset-slide-up">
-						<div className="md:-mx-8 relative aspect-[2/1] h-full xl:mx-0 xl:aspect-auto">
-							{/** biome-ignore lint/nursery/noImgElement: <explanation> */}
-							<img
-								alt=""
-								src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80"
-								className="absolute inset-0 size-full rounded-2xl bg-slate-800 object-cover shadow-2xl"
-							/>
-						</div>
-					</MotionInView>
-					<div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
-						<figure className="relative isolate pt-6 sm:pt-12">
-							<QuoteSvg />
-							<MotionInView
-								as="blockquote"
-								className="motion-safe:motion-preset-fade motion-delay-200 font-semibold text-white text-xl/8 sm:text-2xl/9"
-							>
-								<p>
-									Gravida quam mi erat tortor neque molestie. Auctor aliquet at
-									porttitor a enim nunc suscipit tincidunt nunc. Et non lorem
-									tortor posuere. Nunc eu scelerisque interdum eget tellus non
-									nibh scelerisque bibendum.
-								</p>
-							</MotionInView>
-							<MotionInView
-								as="figcaption"
-								className="motion-safe:motion-preset-fade motion-delay-400 mt-8 text-base"
-							>
-								<div className="font-semibold text-white">Judith Black</div>
-								<div className="mt-1 text-slate-200">CEO of Workcation</div>
-							</MotionInView>
-						</figure>
+		<Section id="depoimento" color="blue" container={false}>
+			<div className="mx-auto flex max-w-7xl flex-col items-center gap-x-8 gap-y-10 px-6 sm:gap-y-8 lg:px-8 xl:flex-row xl:items-stretch">
+				<MotionInView className="-mt-8 xl:-mb-8 motion-safe:motion-preset-slide-up w-full max-w-2xl xl:w-96 xl:flex-none">
+					<div className="md:-mx-8 relative aspect-[2/1] h-full xl:mx-0 xl:aspect-auto">
+						{/** biome-ignore lint/nursery/noImgElement: <explanation> */}
+						<img
+							alt=""
+							src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2102&amp;q=80"
+							className="absolute inset-0 size-full rounded-2xl bg-slate-800 object-cover shadow-2xl"
+						/>
 					</div>
+				</MotionInView>
+				<div className="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:px-16 xl:py-24">
+					<figure className="relative isolate pt-6 sm:pt-12">
+						<QuoteSvg />
+						<MotionInView
+							as="blockquote"
+							className="motion-safe:motion-preset-fade motion-delay-200 font-semibold text-white text-xl/8 sm:text-2xl/9"
+						>
+							<p>
+								Gravida quam mi erat tortor neque molestie. Auctor aliquet at
+								porttitor a enim nunc suscipit tincidunt nunc. Et non lorem
+								tortor posuere. Nunc eu scelerisque interdum eget tellus non
+								nibh scelerisque bibendum.
+							</p>
+						</MotionInView>
+						<MotionInView
+							as="figcaption"
+							className="motion-safe:motion-preset-fade motion-delay-400 mt-8 text-base"
+						>
+							<div className="font-semibold text-white">Judith Black</div>
+							<div className="mt-1 text-slate-200">CEO of Workcation</div>
+						</MotionInView>
+					</figure>
 				</div>
-			</Section>
-		</div>
+			</div>
+		</Section>
 	);
 }
 

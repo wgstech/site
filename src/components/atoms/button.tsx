@@ -11,7 +11,7 @@ const buttonVariants = tv({
 		},
 		intent: {
 			normal:
-				"bg-gradient-to-r from-blue-500 to-cyan-700 text-white transition-colors transition-discrete hover:brightness-125 disabled:from-slate-600 disabled:to-slate-600 disabled:text-slate-100",
+				"bg-gradient-to-r from-blue-500 to-cyan-700 text-white transition-colors hover:from-blue-400 hover:to-cyan-600 disabled:from-slate-600 disabled:to-slate-600 disabled:text-slate-100",
 			outline:
 				"border border-blue-600 bg-transparent text-blue-600 hover:border-blue-700 hover:bg-blue-700 hover:text-white",
 		},
