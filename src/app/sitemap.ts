@@ -8,5 +8,11 @@ export default function sitemap() {
 			changeFrequency: "weekly",
 			priority: 1,
 		},
+		{
+			url: "https://wgstech.com.br/precos",
+			lastModified: new Date(),
+			changeFrequency: "weekly",
+			priority: 0.5,
+		},
 	] satisfies MetadataRoute.Sitemap;
 }

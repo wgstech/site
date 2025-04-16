@@ -1,28 +1,10 @@
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata, Viewport } from "next";
-import { Montserrat } from "next/font/google";
-import localFont from "next/font/local";
+import type { Viewport } from "next";
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { furore, montserrat } from "@/lib/constants/fonts";
 import "@/styles/globals.css";
-
-const furore = localFont({
-	src: "../../public/fonts/Furore.woff2",
-	display: "swap",
-	preload: true,
-	variable: "--font-furore",
-	weight: "'normal'",
-	style: "normal",
-});
-
-const montserrat = Montserrat({
-	display: "swap",
-	subsets: ["latin", "latin-ext"],
-	variable: "--font-montserrat",
-	weight: "variable",
-	preload: true,
-	style: "normal",
-});
 
 export const metadata = {
 	title: "WGS Tech",

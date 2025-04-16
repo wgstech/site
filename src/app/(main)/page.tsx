@@ -3,13 +3,14 @@ import { Navbar } from "@/components/templates/layout/navbar";
 import { ContactSection } from "@/components/templates/sections/contact-section";
 import { FeaturesAndBenefits } from "@/components/templates/sections/features-and-benefits-section";
 import { HeroSection } from "@/components/templates/sections/hero-section";
-import { PricingSection } from "@/components/templates/sections/pricing-section";
 import { ServicesSection } from "@/components/templates/sections/services-section";
 import { SocialProofSection } from "@/components/templates/sections/social-proof-section";
+import { OurMission } from "@/lib/our-mission";
+import { Testimonial } from "@/lib/testimonial";
 
-export default function Home() {
+export default function HomePage() {
 	return (
-		<main>
+		<main className="w-full">
 			<div className="flex h-screen w-full flex-col">
 				<VideoBackground />
 				<Navbar />
@@ -17,8 +18,9 @@ export default function Home() {
 			</div>
 			<FeaturesAndBenefits />
 			<SocialProofSection />
+			<Testimonial />
+			<OurMission />
 			<ServicesSection />
-			<PricingSection />
 			<ContactSection />
 		</main>
 	);

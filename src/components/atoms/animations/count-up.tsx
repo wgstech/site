@@ -1,9 +1,9 @@
 "use client";
 
-import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
-import { prefersReducedMotion } from "@/lib/helpers/prefers-reduced-motion";
 import { CountUp as CountUpPrimitive } from "countup.js";
 import { useEffect } from "react";
+import { prefersReducedMotion } from "@/lib/helpers/prefers-reduced-motion";
+import { useIntersectionOnce } from "@/lib/hooks/useIntersectionOnce";
 
 interface CountUpProps {
 	from?: number;
@@ -23,5 +23,9 @@ export function CountUp({ from = 0, to, duration }: CountUpProps) {
 		if (!countUp.error) countUp.start();
 	}, [duration, to, didIntersect, ref]);
 
-	return <span ref={ref}>{prefersReducedMotion() ? to : from}</span>;
+	return (
+		<span ref={ref} className="font-mono">
+			{prefersReducedMotion() ? to : from}
+		</span>
+	);
 }
