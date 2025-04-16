@@ -1,6 +1,5 @@
 "use client";
 
-import { setTimeout } from "node:timers";
 import { CountUp as CountUpPrimitive } from "countup.js";
 import { useEffect } from "react";
 import { prefersReducedMotion } from "@/lib/helpers/prefers-reduced-motion";
