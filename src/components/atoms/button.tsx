@@ -5,8 +5,8 @@ const buttonVariants = tv({
 	base: "flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",
 	variants: {
 		size: {
-			md: "px-3 py-2",
-			lg: "px-4 py-4 text-lg",
+			md: "p-3",
+			lg: "p-4 text-lg",
 			xl: "px-5 py-4 text-lg",
 		},
 		intent: {

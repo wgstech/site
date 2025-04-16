@@ -7,7 +7,7 @@ export function SectionTitle({ className, ...rest }: ComponentProps<"h2">) {
 		<MotionInView className="motion-safe:motion-preset-slide-up-lg">
 			<h2
 				className={twMerge(
-					"text-center font-semibold text-3xl text-blue-700 lg:text-4xl",
+					"text-center font-semibold text-3xl text-blue-700 tracking-tight lg:text-4xl",
 					className,
 				)}
 				{...rest}

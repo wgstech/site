@@ -27,7 +27,7 @@ export function FeaturesAndBenefits() {
 			</div>
 			<MotionInView className="motion-safe:motion-preset-fade-lg motion-delay-900">
 				<ContactFormModal>
-					<Button size="lg" className="mx-auto" type="button">
+					<Button size="md" className="mx-auto" type="button">
 						Estou interessado
 						<ArrowRight weight="bold" />
 					</Button>
@@ -52,11 +52,8 @@ function BenefitCard({ children, title, Icon, className }: BenefitCardProps) {
 				className,
 			)}
 		>
-			<Icon
-				weight="fill"
-				className="size-12 text-orange-400 md:size-16 lg:size-18"
-			/>
-			<h3 className="font-semibold text-2xl text-blue-700 lg:text-3xl">
+			<Icon weight="fill" className="size-12 text-orange-400 md:size-14" />
+			<h3 className="font-semibold text-2xl text-blue-700 lg:text-2xl">
 				{title}
 			</h3>
 			{children}

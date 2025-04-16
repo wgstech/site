@@ -12,12 +12,12 @@ export default function HomePage() {
 		<main className="w-full">
 			<div className="flex h-screen w-full flex-col">
 				<VideoBackground />
-				<Navbar />
+				<Navbar className="text-white" />
 				<HeroSection />
 			</div>
 			<FeaturesAndBenefits />
-			<Testimonial />
 			<OurMission />
+			<Testimonial />
 			<ServicesSection />
 			<ContactSection />
 		</main>

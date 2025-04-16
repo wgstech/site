@@ -1,5 +1,6 @@
 "use client";
 
+import { setTimeout } from "node:timers";
 import { CountUp as CountUpPrimitive } from "countup.js";
 import { useEffect } from "react";
 import { prefersReducedMotion } from "@/lib/helpers/prefers-reduced-motion";
@@ -9,19 +10,23 @@ interface CountUpProps {
 	from?: number;
 	to: number;
 	duration: number;
+	delay?: number;
 }
 
-export function CountUp({ from = 0, to, duration }: CountUpProps) {
+export function CountUp({ from = 0, to, duration, delay = 0 }: CountUpProps) {
 	const [ref, didIntersect] = useIntersectionOnce();
 
 	useEffect(() => {
-		if (ref.current == null || !didIntersect || prefersReducedMotion()) return;
+		setTimeout(() => {
+			if (ref.current == null || !didIntersect || prefersReducedMotion())
+				return;
 
-		const countUp = new CountUpPrimitive(ref.current, to, {
-			duration,
-		});
-		if (!countUp.error) countUp.start();
-	}, [duration, to, didIntersect, ref]);
+			const countUp = new CountUpPrimitive(ref.current, to, {
+				duration: duration / 1000,
+			});
+			if (!countUp.error) countUp.start();
+		}, delay);
+	}, [duration, to, didIntersect, ref, delay]);
 
 	return <span ref={ref}>{prefersReducedMotion() ? to : from}</span>;
 }

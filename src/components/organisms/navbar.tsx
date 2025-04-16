@@ -1,38 +1,15 @@
 import Link from "next/link";
 import type { ComponentProps } from "react";
-import { tv, type VariantProps } from "tailwind-variants";
+import { twMerge } from "tailwind-merge";
 import { LogoWithText } from "@/components/atoms/logos/logo-with-text";
 
-const navbarVariants = tv({
-	slots: {
-		header: "w-full transition-colors",
-		container:
-			"container flex items-center justify-between px-4 transition-colors",
-	},
-	variants: {
-		color: {
-			white: {
-				header: "bg-white text-blue-800",
-			},
-			transparent: {
-				header: "text-slate-50",
-			},
-			blue: {
-				header: "bg-slate-800 text-white",
-			},
-		},
-	},
-	defaultVariants: {
-		color: "transparent",
-	},
-});
-
-const { header, container } = navbarVariants();
-
-export function Navbar({ color }: VariantProps<typeof navbarVariants>) {
+export function Navbar({ className, ...rest }: ComponentProps<"header">) {
 	return (
-		<header className={header({ color })}>
-			<nav className={container({ color })}>
+		<header
+			className={twMerge("w-full transition-colors", className)}
+			{...rest}
+		>
+			<nav className="container flex items-center justify-between px-4 transition-colors">
 				<LogoWithText />
 				<div className="flex flex-1 items-center justify-end gap-4 sm:gap-8">
 					<NavLink href="/precos">Preços</NavLink>

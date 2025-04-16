@@ -6,7 +6,7 @@ const sectionVariants = tv({
 	variants: {
 		color: {
 			white: "bg-white",
-			slate: "bg-slate-100",
+			slate: "bg-slate-50",
 			blue: "bg-gradient-to-br from-blue-500 to-cyan-700",
 			dark: "bg-blue-800",
 		},

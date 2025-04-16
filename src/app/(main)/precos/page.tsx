@@ -5,7 +5,7 @@ export default function PricingPage() {
 	return (
 		<main>
 			<div className="flex h-screen w-full flex-col">
-				<Navbar color="blue" />
+				<Navbar className="bg-slate-800 text-white" />
 				<PricingSection />
 			</div>
 		</main>

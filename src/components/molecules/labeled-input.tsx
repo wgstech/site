@@ -1,5 +1,8 @@
 import type { Icon, IconWeight } from "@phosphor-icons/react";
-import type { ComponentPropsWithRef } from "react";
+import type {
+	ComponentPropsWithRef,
+	HTMLInputAutoCompleteAttribute,
+} from "react";
 import type { FieldError, UseFormRegisterReturn } from "react-hook-form";
 import { tv, type VariantProps } from "tailwind-variants";
 
@@ -41,6 +44,7 @@ interface LabeledInputProps extends UseFormRegisterReturn {
 	iconFill?: IconWeight;
 	placeholder: string;
 	error?: FieldError | undefined;
+	autoComplete?: HTMLInputAutoCompleteAttribute | undefined;
 }
 
 export function LabeledInput({

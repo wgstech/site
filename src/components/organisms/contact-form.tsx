@@ -67,6 +67,7 @@ export function ContactForm({ onSubmit, details }: ContactFormProps) {
 				Icon={User}
 				type="input"
 				placeholder="Gabriel Santos"
+				autoComplete="name"
 				error={errors.name}
 				{...register("name")}
 			/>
@@ -76,6 +77,7 @@ export function ContactForm({ onSubmit, details }: ContactFormProps) {
 				type="input"
 				iconFill="light"
 				placeholder="Seu WhatsApp ou telefone"
+				autoComplete="tel-national"
 				error={errors.phone}
 				{...register("phone")}
 			/>

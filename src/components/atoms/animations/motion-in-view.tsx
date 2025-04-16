@@ -21,6 +21,7 @@ export function MotionInView<T extends ElementType = "div">({
 		<Component
 			ref={ref}
 			className={twMerge(
+				"w-fit",
 				className,
 				didIntersect
 					? "motion-safe:motion-running"
