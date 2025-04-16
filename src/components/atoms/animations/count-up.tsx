@@ -23,9 +23,5 @@ export function CountUp({ from = 0, to, duration }: CountUpProps) {
 		if (!countUp.error) countUp.start();
 	}, [duration, to, didIntersect, ref]);
 
-	return (
-		<span ref={ref} className="font-mono">
-			{prefersReducedMotion() ? to : from}
-		</span>
-	);
+	return <span ref={ref}>{prefersReducedMotion() ? to : from}</span>;
 }

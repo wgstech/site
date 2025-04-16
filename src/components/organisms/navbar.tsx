@@ -1,6 +1,7 @@
+import Link from "next/link";
+import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 import { LogoWithText } from "@/components/atoms/logos/logo-with-text";
-import { NavLink } from "@/components/atoms/nav-link";
 
 const navbarVariants = tv({
 	slots: {
@@ -39,5 +40,14 @@ export function Navbar({ color }: VariantProps<typeof navbarVariants>) {
 				</div>
 			</nav>
 		</header>
+	);
+}
+
+function NavLink(props: ComponentProps<typeof Link>) {
+	return (
+		<Link
+			className="motion-duration-200 hover:motion-safe:-motion-translate-y-out-[2px] focus-within:motion-safe:-motion-translate-y-out-[2px] cursor-pointer rounded-xl p-2 font-medium text-xs uppercase tracking-widest focus-within:text-blue-300 hover:text-blue-300"
+			{...props}
+		/>
 	);
 }

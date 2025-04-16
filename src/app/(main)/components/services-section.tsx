@@ -1,7 +1,28 @@
 import Image, { type StaticImageData } from "next/image";
 import type { PropsWithChildren } from "react";
 import { twMerge } from "tailwind-merge";
-import { MotionInView } from "../atoms/animations/motion-in-view";
+import { MotionInView } from "@/components/atoms/animations/motion-in-view";
+import { Section } from "@/components/atoms/section";
+import { SectionSubtitle } from "@/components/molecules/section-subtitle";
+import { SectionTitle } from "@/components/molecules/section-title";
+import { services } from "@/lib/constants/services";
+
+export function ServicesSection() {
+	return (
+		<Section id="serviços">
+			<SectionTitle>Tudo Que Sua Empresa Precisa em TI</SectionTitle>
+			<SectionSubtitle>
+				Soluções completas para manter sua infraestrutura funcionando
+				perfeitamente.
+			</SectionSubtitle>
+			<div className="justify-content-between mt-20 grid grid-cols-1 place-content-center content-between justify-center gap-16 md:grid-cols-2 lg:grid-cols-4">
+				{services.map((service) => (
+					<ServiceCard key={service.title} {...service} />
+				))}
+			</div>
+		</Section>
+	);
+}
 
 interface ServiceCardProps extends PropsWithChildren {
 	img: StaticImageData;
@@ -9,12 +30,7 @@ interface ServiceCardProps extends PropsWithChildren {
 	className?: string;
 }
 
-export function ServiceCard({
-	img,
-	children,
-	title,
-	className,
-}: ServiceCardProps) {
+function ServiceCard({ img, children, title, className }: ServiceCardProps) {
 	return (
 		<MotionInView
 			className={twMerge(

@@ -1,5 +1,5 @@
-import { Navbar } from "@/components/templates/layout/navbar";
-import { PricingSection } from "@/components/templates/sections/pricing-section";
+import { Navbar } from "@/components/organisms/navbar";
+import { PricingSection } from "./components/pricing-section";
 
 export default function PricingPage() {
 	return (

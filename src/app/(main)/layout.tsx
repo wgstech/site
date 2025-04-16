@@ -1,6 +1,6 @@
-import { Footer } from "@/components/templates/layout/footer";
 import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
+import { Footer } from "@/components/organisms/footer";
 
 export default function Layout({
 	children,

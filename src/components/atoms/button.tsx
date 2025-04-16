@@ -1,6 +1,5 @@
-import { type VariantProps } from "class-variance-authority";
 import type { ComponentProps } from "react";
-import { tv } from "tailwind-variants";
+import { tv, type VariantProps } from "tailwind-variants";
 
 const buttonVariants = tv({
 	base: "flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",

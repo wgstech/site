@@ -1,6 +1,6 @@
 import Image from "next/image";
+import { ExternalLink } from "@/components/atoms/external-link";
 import type { Tool } from "@/lib/constants/tools";
-import { ExternalLink } from "../atoms/external-link";
 
 export function ToolCard({ site, name, image, type }: Tool) {
 	return (

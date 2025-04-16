@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { ToolCard } from "@/components/organisms/tool-card";
-import { Navbar } from "@/components/templates/layout/navbar";
+import { ToolCard } from "@/app/(main)/toolbox/components/tool-card";
+import { Navbar } from "@/components/organisms/navbar";
 import { tools } from "@/lib/constants/tools";
 
 export const metadata = {
