@@ -64,7 +64,7 @@ export const prices = [
 		],
 	},
 	{
-		title: "Elite",
+		title: "Avançado",
 		description: "Cobertura completa e sem limites.",
 		basePrice: 600,
 		freeMachines: 8,
