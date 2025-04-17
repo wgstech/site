@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Navbar } from "@/components/organisms/navbar";
 import { OurMission } from "@/components/organisms/our-mission";
 import { Testimonial } from "@/components/organisms/testimonial";
@@ -18,7 +19,9 @@ export default function HomePage() {
 			<FeaturesAndBenefits />
 			<OurMission />
 			<Testimonial />
-			<ServicesSection />
+			<Suspense>
+				<ServicesSection />
+			</Suspense>
 			<ContactSection />
 		</main>
 	);

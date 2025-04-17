@@ -1,9 +1,8 @@
+import { Suspense } from "react";
 import { SectionSubtitle } from "@/components/molecules/section-subtitle";
 import { SectionTitle } from "@/components/molecules/section-title";
 import { Navbar } from "@/components/organisms/navbar";
 import { PricingSection } from "./components/pricing-section";
-
-export const dynamic = "force-static";
 
 export default function PricingPage() {
 	return (
@@ -18,7 +17,9 @@ export default function PricingPage() {
 					<br />
 					Cancele a qualquer momento.
 				</SectionSubtitle>
-				<PricingSection />
+				<Suspense>
+					<PricingSection />
+				</Suspense>
 			</div>
 		</main>
 	);
