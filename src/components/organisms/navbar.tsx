@@ -23,6 +23,7 @@ export function Navbar({ className, ...rest }: ComponentProps<"header">) {
 function NavLink(props: ComponentProps<typeof Link>) {
 	return (
 		<Link
+			prefetch
 			className="motion-duration-200 hover:motion-safe:-motion-translate-y-out-[2px] focus-within:motion-safe:-motion-translate-y-out-[2px] cursor-pointer rounded-xl p-2 font-medium text-xs uppercase tracking-widest focus-within:text-blue-300 hover:text-blue-300"
 			{...props}
 		/>
