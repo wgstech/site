@@ -2,68 +2,68 @@
 @plugin "tailwindcss-motion";
 
 @theme inline {
-	--font-furore: Furore, var(--font-serif);
-	--font-montserrat: Montserrat, var(--font-sans);
+  --font-furore: Furore, var(--font-serif);
+  --font-montserrat: Montserrat, var(--font-sans);
 
-	--default-transition-duration: 500ms;
+  --default-transition-duration: 500ms;
 
-	--color-blue-50: #effaff;
-	--color-blue-100: #def3ff;
-	--color-blue-200: #b6eaff;
-	--color-blue-300: #75dcff;
-	--color-blue-400: #2ccbff;
-	--color-blue-500: #00afef;
-	--color-blue-600: #0091d4;
-	--color-blue-700: #0073ab;
-	--color-blue-800: #00618d;
-	--color-blue-900: #065174;
-	--color-blue-950: #04334d;
+  --color-blue-50: #effaff;
+  --color-blue-100: #def3ff;
+  --color-blue-200: #b6eaff;
+  --color-blue-300: #75dcff;
+  --color-blue-400: #2ccbff;
+  --color-blue-500: #00afef;
+  --color-blue-600: #0091d4;
+  --color-blue-700: #0073ab;
+  --color-blue-800: #00618d;
+  --color-blue-900: #065174;
+  --color-blue-950: #04334d;
 
-	--color-orange-50: #fef7ee;
-	--color-orange-100: #feecd6;
-	--color-orange-200: #fcd5ac;
-	--color-orange-300: #f9b778;
-	--color-orange-400: #f58634;
-	--color-orange-500: #f36f1c;
-	--color-orange-600: #e45512;
-	--color-orange-700: #bd3f11;
-	--color-orange-800: #963316;
-	--color-orange-900: #792b15;
-	--color-orange-950: #411409;
+  --color-orange-50: #fef7ee;
+  --color-orange-100: #feecd6;
+  --color-orange-200: #fcd5ac;
+  --color-orange-300: #f9b778;
+  --color-orange-400: #f58634;
+  --color-orange-500: #f36f1c;
+  --color-orange-600: #e45512;
+  --color-orange-700: #bd3f11;
+  --color-orange-800: #963316;
+  --color-orange-900: #792b15;
+  --color-orange-950: #411409;
 }
 
 @layer base {
-	button:not(:disabled),
-	[role="button"]:not(:disabled) {
-		cursor: pointer;
-	}
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
 
-	dialog {
-		margin: auto;
-	}
+  dialog {
+    margin: auto;
+  }
 
-	input::placeholder,
-	textarea::placeholder {
-		color: var(--color-slate-400);
-	}
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-slate-400);
+  }
 
-	strong,
-	b {
-		font-weight: 700;
-	}
+  strong,
+  b {
+    font-weight: 700;
+  }
 }
 
 @layer theme {
-	:focus {
-		@apply outline-none;
-	}
+  :focus {
+    @apply outline-none;
+  }
 
-	:focus-visible {
-		@apply outline-orange-400 outline-2 outline-solid;
-	}
+  :focus-visible {
+    @apply outline-2 outline-orange-400 outline-solid;
+  }
 }
 
 @utility container {
-	margin-inline: auto;
-	padding-inline: 2rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
 }

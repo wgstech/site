@@ -1,17 +1,17 @@
+import { Footer } from "@/components/organisms/footer";
 import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
-import { Footer } from "@/components/organisms/footer";
 
 export default function Layout({
-	children,
+  children,
 }: Readonly<{
-	children: ReactNode;
+  children: ReactNode;
 }>) {
-	return (
-		<>
-			<Toaster />
-			{children}
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Toaster />
+      {children}
+      <Footer />
+    </>
+  );
 }
