@@ -13,7 +13,7 @@ export function ContactSection() {
     >
       <div className="mx-auto w-fit rounded-2xl bg-slate-50 p-10 shadow-md transition-shadow focus-within:shadow-2xl hover:shadow-2xl">
         <SectionTitle>Entraremos em contato com você</SectionTitle>
-        <SectionSubtitle className="text-slate-500">
+        <SectionSubtitle className="mb-5 text-slate-500">
           Não compartilharemos seus dados com ninguém.
         </SectionSubtitle>
 

@@ -1,3 +1,3 @@
-import { config, configs } from "@gurja/eslint-config";
+import { config, next } from "@gurja/eslint-config";
 
-export default config(configs.next, configs.typeChecked.next("tsconfig.json"));
+export default config(next({}));

@@ -2,12 +2,12 @@ import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const sectionVariants = tv({
-  base: "my-32 md:my-56",
+  base: "py-32 md:py-56",
   variants: {
     color: {
       white: "bg-white",
       slate: "bg-slate-50",
-      blue: "bg-gradient-to-br from-blue-500 to-cyan-700",
+      blue: "bg-gradient-to-br from-blue-500 to-cyan-700 text-white",
       dark: "bg-blue-800",
     },
     container: {

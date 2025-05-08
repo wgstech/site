@@ -6,7 +6,8 @@ import type {
   ElementType,
   PropsWithChildren,
 } from "react";
-import { twMerge, type ClassNameValue } from "tailwind-merge";
+import type { ClassNameValue } from "tailwind-merge";
+import { tv } from "tailwind-variants";
 
 type PolymorphicProps<E extends ElementType> = PropsWithChildren<
   ComponentPropsWithoutRef<E> & { as?: E }
@@ -16,6 +17,18 @@ type MotionInViewProps<T extends ElementType> = PolymorphicProps<T> & {
   threshold?: number;
   className?: ClassNameValue;
 };
+
+const motionInViewVariants = tv({
+  variants: {
+    didIntersect: {
+      true: "motion-safe:motion-running",
+      false: "motion-safe:motion-paused",
+    },
+  },
+  defaultVariants: {
+    didIntersect: false,
+  },
+});
 
 export function MotionInView<T extends ElementType = "div">({
   className,
@@ -28,12 +41,7 @@ export function MotionInView<T extends ElementType = "div">({
   return (
     <Component
       ref={ref}
-      className={twMerge(
-        className,
-        didIntersect
-          ? "motion-safe:motion-running"
-          : "motion-safe:motion-paused",
-      )}
+      className={motionInViewVariants({ className, didIntersect })}
       {...rest}
     />
   );

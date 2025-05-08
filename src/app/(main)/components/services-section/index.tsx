@@ -4,6 +4,7 @@ import { Section } from "@/components/atoms/section";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/tabs";
 import { parseAsStringEnum, useQueryState } from "nuqs";
 import { ForCompanies } from "./for-companies";
+import { ForResidences } from "./for-residences";
 
 export function ServicesSection() {
   const [services, setServices] = useQueryState(
@@ -25,7 +26,7 @@ export function ServicesSection() {
           <TabsTrigger value="empresa">Para Empresas</TabsTrigger>
         </TabsList>
         <TabsContent value="residencial">
-          <ForCompanies />
+          <ForResidences />
         </TabsContent>
         <TabsContent value="empresa">
           <ForCompanies />

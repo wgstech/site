@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 import { tv, type VariantProps } from "tailwind-variants";
 
 const buttonVariants = tv({
-  base: "flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",
+  base: "inline-flex items-center justify-center gap-2 rounded-xl font-semibold disabled:pointer-events-none",
   variants: {
     size: {
       md: "p-3",
