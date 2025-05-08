@@ -1,10 +1,31 @@
 /* eslint-disable react/jsx-key */
+import type { IconProps, Icon as PhosphorIcon } from "@phosphor-icons/react";
 import {
-  ArrowLeftItem,
-  CheckItem,
-  PlusItem,
-} from "@/components/atoms/price-items";
+  ArrowCircleLeft,
+  CheckCircle,
+  ClipboardText,
+  ClockCounterClockwise,
+  DesktopTower,
+  Faders,
+  GraduationCap,
+  Handshake,
+  Headset,
+  Network,
+  PlusCircle,
+  PresentationChart,
+  Strategy,
+} from "@phosphor-icons/react/dist/ssr";
 import type { ReactNode } from "react";
+import { twMerge } from "tailwind-merge";
+
+export function CheckItem({ children }: { children: ReactNode }) {
+  return (
+    <>
+      <CheckCircle weight="fill" className="size-5 flex-none text-orange-500" />
+      <span>{children}</span>
+    </>
+  );
+}
 
 export type PlanName = "Essencial" | "Pro" | "Max" | "Enterprise";
 
@@ -25,17 +46,21 @@ export const prices = [
     additionalMachinePrice: 80,
     description: "O essencial para você começar.",
     items: [
-      <CheckItem>Suporte remoto e no local</CheckItem>,
-      <CheckItem>
+      <PriceItem Icon={Headset} weight="bold">
+        Suporte remoto e no local
+      </PriceItem>,
+      <PriceItem Icon={DesktopTower} weight="bold">
         Monitoramento, Manutenção e Patching de até{" "}
         <strong className="text-blue-800">2</strong> máquinas
-      </CheckItem>,
-      <CheckItem>Gerenciamento completo da sua rede</CheckItem>,
-      <PlusItem>
+      </PriceItem>,
+      <PriceItem Icon={Network} weight="bold">
+        Gerenciamento completo da sua rede
+      </PriceItem>,
+      <PriceItem Icon={PlusCircle} weight="bold" className="text-slate-500">
         Máquinas adicionais por{" "}
         <strong className="text-nowrap whitespace-nowrap">R$ 80/mês</strong>{" "}
         cada
-      </PlusItem>,
+      </PriceItem>,
     ],
   },
   {
@@ -45,18 +70,28 @@ export const prices = [
     freeMachines: 4,
     additionalMachinePrice: 70,
     items: [
-      <ArrowLeftItem>Tudo do Essencial</ArrowLeftItem>,
-      <CheckItem>
+      <PriceItem
+        Icon={ArrowCircleLeft}
+        weight="fill"
+        className="text-emerald-600"
+      >
+        Tudo do Essencial
+      </PriceItem>,
+      <PriceItem Icon={DesktopTower} weight="bold">
         Monitoramento, Manutenção e Patching de até{" "}
         <strong className="text-blue-800">4</strong> máquinas
-      </CheckItem>,
-      <CheckItem>Relatórios mensais de desempenho e manutenção</CheckItem>,
-      <CheckItem>Consultoria básica em TI</CheckItem>,
-      <PlusItem>
+      </PriceItem>,
+      <PriceItem Icon={PresentationChart} weight="bold">
+        Consultoria básica em TI
+      </PriceItem>,
+      <PriceItem Icon={ClipboardText} weight="bold">
+        Relatórios mensais de desempenho e manutenção
+      </PriceItem>,
+      <PriceItem Icon={PlusCircle} weight="bold" className="text-slate-500">
         Máquinas adicionais por{" "}
         <strong className="text-nowrap whitespace-nowrap">R$ 70/mês</strong>{" "}
         cada
-      </PlusItem>,
+      </PriceItem>,
     ],
   },
   {
@@ -66,33 +101,75 @@ export const prices = [
     freeMachines: 10,
     additionalMachinePrice: 60,
     items: [
-      <ArrowLeftItem>Tudo do Pro</ArrowLeftItem>,
-      <CheckItem>
+      <PriceItem
+        Icon={ArrowCircleLeft}
+        weight="fill"
+        className="text-emerald-600"
+      >
+        Tudo do Pro
+      </PriceItem>,
+      <PriceItem Icon={DesktopTower} weight="bold">
         Monitoramento, Manutenção e Patching de até{" "}
         <strong className="text-blue-800">10</strong> máquinas
-      </CheckItem>,
-      <CheckItem>
+      </PriceItem>,
+      <PriceItem Icon={Strategy} weight="bold">
         Consultoria estratégica para otimizar sua infraestrutura
-      </CheckItem>,
-      <CheckItem>Gerenciamento completo de Backups</CheckItem>,
-      <CheckItem>Treinamento de conscientização sobre segurança</CheckItem>,
-      <PlusItem>
+      </PriceItem>,
+      <PriceItem Icon={ClockCounterClockwise} weight="bold">
+        Gerenciamento completo de Backups
+      </PriceItem>,
+      <PriceItem Icon={GraduationCap} weight="bold">
+        Treinamento de conscientização sobre segurança
+      </PriceItem>,
+      <PriceItem Icon={PlusCircle} weight="bold" className="text-slate-500">
         Máquinas adicionais por{" "}
         <strong className="text-nowrap whitespace-nowrap">R$ 60/mês</strong>{" "}
         cada
-      </PlusItem>,
+      </PriceItem>,
     ],
   },
   {
     title: "Enterprise",
     basePrice: "custom",
-    description: "Plano que escala com você",
+    description: "Plano que escala com você.",
     freeMachines: 0,
     additionalMachinePrice: 0,
     items: [
-      <ArrowLeftItem>Tudo do Max</ArrowLeftItem>,
-      <CheckItem>SLA personalizado</CheckItem>,
-      <CheckItem>Condições comerciais e contrato sob medida</CheckItem>,
+      <PriceItem
+        Icon={ArrowCircleLeft}
+        weight="fill"
+        className="text-emerald-600"
+      >
+        Tudo do Max
+      </PriceItem>,
+      <PriceItem Icon={Handshake} weight="bold">
+        SLA personalizado
+      </PriceItem>,
+      <PriceItem Icon={Faders} weight="bold">
+        Condições comerciais e contrato sob medida
+      </PriceItem>,
     ],
   },
 ] satisfies Price[];
+
+interface PriceItemProps extends IconProps {
+  children?: ReactNode;
+  Icon: PhosphorIcon;
+}
+
+function PriceItem({
+  children,
+  Icon,
+  className,
+  ...iconProps
+}: PriceItemProps) {
+  return (
+    <p className="flex min-h-18 items-center gap-x-3">
+      <Icon
+        className={twMerge("size-6 flex-none text-orange-500", className)}
+        {...iconProps}
+      />
+      <span>{children}</span>
+    </p>
+  );
+}

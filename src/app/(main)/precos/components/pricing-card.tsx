@@ -88,11 +88,9 @@ export function PricingCard({
         </button>
       </ContactFormModal>
       <p className="mt-10 text-sm/6 font-semibold">{description}</p>
-      <ul className="mt-6 space-y-5 text-sm/6 text-slate-600">
+      <ul className="mt-6 space-y-2 text-sm/6 text-slate-600">
         {items.map((item, index) => (
-          <li className="flex items-center gap-x-3" key={index}>
-            {item}
-          </li>
+          <li key={index}>{item}</li>
         ))}
       </ul>
     </div>

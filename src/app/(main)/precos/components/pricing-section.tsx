@@ -18,11 +18,10 @@ export function PricingSection() {
   return (
     <>
       <div className="mx-auto my-12 flex w-full max-w-2xl flex-col gap-4 px-4">
-        <label htmlFor="number-of-machines" className="text-center font-medium">
+        <label className="text-center font-medium">
           Quantas máquinas você tem?
         </label>
         <Slider
-          id="number-of-machines"
           min={0}
           max={machineCountSliderSteps.length - 1}
           defaultValue={[0]}
